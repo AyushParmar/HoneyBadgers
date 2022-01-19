@@ -1,0 +1,79 @@
+.heading{
+    text-align: center;
+    color:#FFBC45;
+    font-size: 40px;
+    margin-bottom: 4%;
+    font-family: 'Bios';
+}
+@font-face {
+    font-family: 'Bios';
+    src: url('css/bios-typeface-2021-08-27-09-45-48-utc/Bios Bold.otf');
+    src: local('Bios'),
+         url('css/bios-typeface-2021-08-27-09-45-48-utc/Bios Bold.otf'),
+         format('opentype');
+}
+@font-face {
+    font-family: 'Bios';
+    src: url('css/bios-typeface-2021-08-27-09-45-48-utc/Bios Regular.otf');
+    src: local('Bios'),
+         url('css/bios-typeface-2021-08-27-09-45-48-utc/Bios Regular.otf'),
+         format('opentype');
+}
+body{
+    background-color: #171717;
+}
+
+#main{
+    background-color: #272727;
+    padding:20px;
+    /* margin-top: 3%; */
+    margin: 3% 3% 3% 3%;
+    
+}
+
+.content-heading{
+    margin-bottom: 2%;
+    color: #efa63f;
+    font-size: 30px;
+    font-family: 'Bios';
+}
+
+.content{
+    width:95%;
+    margin-bottom: 4.5%;
+    margin-left: 2%;
+    text-align: left; 
+}
+
+.para-terms{
+    color:white;
+    font-size: 20px;
+    font-family: 'Space mono', 'sans-serif';
+    letter-spacing: 1px;
+    word-spacing: 0.25em;
+    line-height: 30px;
+    margin-bottom: 2%;
+    text-align: justify;
+}
+
+ul{
+    color:white;
+    font-size: 20px;
+    font-family: 'Space mono', 'sans-serif';
+    letter-spacing: 1px;
+    word-spacing: 0.25em;
+    line-height: 30px;
+}
+
+a{
+    color: white;
+    text-decoration:dotted;
+}
+a:hover{
+    color :blue;
+}
+
+ .disclaimer{
+     /* text-transform:; */
+
+ }

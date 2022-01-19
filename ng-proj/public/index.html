@@ -1,0 +1,1984 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="image/emblem-onblack.png" type="image/x-icon">
+    <meta name="description" content="WELCOME TO SOLICITY! Home of the Honey Badgers on the Ethereum Network."/>
+    <title>NF Honey Badgers</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Work+Sans:wght@500;600&display=swap" rel="stylesheet">    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.6.1-rc.0/web3.min.js"
+        integrity="sha512-+4Gl8sbHe5qD5EQiPtIva4be9TwUmmzgYJUdGbhsLYNegQw4Quda/4QdZpJzx8cHq2s1F4PoIpAnERQ0hHTcNQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <style>
+        
+          
+        
+        .center {
+            position: fixed;
+            top: 10%;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+        }
+    </style>
+</head>
+
+<body onload="fnBrowserDetect()">
+    <div id="loader">
+        <div class="center spinner">
+        </div>
+        <div>
+            <img src="image/loading.png" class="loading-badger center" alt="">
+        </div>
+        <div>
+            <img src="image/nfhb-onblack 2.png" class="loading-badger-2 center" alt="">
+        </div>
+    </div>
+    
+    <header class="hive-display-container hive-wide" id="home">
+
+        
+        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top nav-hidden">
+            <div class="container-fluid">
+                
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+                    aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarText">
+                    <ul class="navbar-nav mb-2 mb-lg-0" style="margin-left: 17%;">
+                        <li class="nav-item margin-02 ">
+                            <a class="nav-link nav-color-03" href="#anomalies"><span
+                                    class="font-family-01">TRAITS</span>
+                            </a>
+                        </li>
+                        <li class="nav-item margin-02">
+                            <a class="nav-link nav-color-03" href="#roadmap-id-01"><span
+                                    class="font-family-01">ROADMAP</a></span>
+                        </li>
+                        <li class="nav-item margin-02">
+                            <a class="nav-link nav-color-03" href="#gallery"><span
+                                    class="font-family-01">GALLERY</a></span>
+                        </li>
+                        <!-- <li class="nav-item margin-02">
+                            <a class="nav-link nav-color-03" href="#team"><span class="font-family-01">TEAM</span></a>
+                        </li> -->
+                        <li class="nav-item margin-02">
+                            <a class="nav-link nav-color-03" href="#faq"><span class="font-family-01">FAQs</a></span>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav mb-2 my-lg-0" id="socialhandles" style="margin: auto;">
+                        <li class="margin-02" style="margin-top: auto; margin-bottom: auto; margin-right: 1%;">
+                            <a href="https://discord.gg/SU7uf7RPn4" target="_blank" style="padding-left: 5%; padding-right: 5%;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M14.8199 4.25977C14.6213 4.61545 14.4443 4.98279 14.2899 5.35977C12.7727 5.11982 11.2272 5.11982 9.70992 5.35977C9.55551 4.98279 9.37852 4.61545 9.17992 4.25977C7.75071 4.50397 6.36132 4.9413 5.04992 5.55977C2.70486 8.94405 1.64135 13.0527 2.04992 17.1498C3.57815 18.2986 5.29337 19.1748 7.11992 19.7398C7.53583 19.1904 7.90702 18.6085 8.22992 17.9998C7.63399 17.78 7.06121 17.502 6.51992 17.1698C6.66838 17.071 6.80881 16.9606 6.93992 16.8398C8.51838 17.6001 10.2479 17.9949 11.9999 17.9949C13.7519 17.9949 15.4815 17.6001 17.0599 16.8398C17.1999 16.9598 17.3399 17.0698 17.4799 17.1698C16.9357 17.4994 16.3635 17.7805 15.7699 18.0098C16.0794 18.6323 16.4407 19.2277 16.8499 19.7898C18.6742 19.2268 20.3864 18.3504 21.9099 17.1998C22.3283 13.102 21.2639 8.98995 18.9099 5.60977C17.6132 4.9785 16.2376 4.52444 14.8199 4.25977ZM8.67992 14.8098C8.1795 14.7738 7.71246 14.5455 7.37684 14.1725C7.04121 13.7996 6.86311 13.3112 6.87992 12.8098C6.86058 12.3077 7.0378 11.8178 7.37393 11.4444C7.71005 11.0709 8.17858 10.8432 8.67992 10.8098C9.18126 10.8432 9.64978 11.0709 9.9859 11.4444C10.322 11.8178 10.4993 12.3077 10.4799 12.8098C10.4993 13.3119 10.322 13.8017 9.9859 14.1752C9.64978 14.5486 9.18126 14.7763 8.67992 14.8098ZM15.3199 14.8098C14.8195 14.7738 14.3525 14.5455 14.0168 14.1725C13.6812 13.7996 13.5031 13.3112 13.5199 12.8098C13.5006 12.3077 13.6778 11.8178 14.0139 11.4444C14.3501 11.0709 14.8186 10.8432 15.3199 10.8098C15.8222 10.8407 16.2922 11.0677 16.6289 11.4417C16.9655 11.8158 17.1418 12.307 17.1199 12.8098C17.1418 13.3125 16.9655 13.8038 16.6289 14.1778C16.2922 14.5519 15.8222 14.7788 15.3199 14.8098Z" fill="#C4C4C4"/>
+                                </svg></a>
+                        </li>
+                        <li class="margin-02" style="margin-top: auto; margin-bottom: auto; margin-right: 1%;">
+                            <a href="https://twitter.com/NFHoneyBadgers" target="_blank" style="padding-left: 5%; padding-right: 5%;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M19.633 7.99704C19.646 8.17204 19.646 8.34604 19.646 8.52004C19.646 13.845 15.593 19.981 8.186 19.981C5.904 19.981 3.784 19.32 2 18.172C2.324 18.209 2.636 18.222 2.973 18.222C4.78599 18.2264 6.54765 17.6202 7.974 16.501C7.13342 16.4858 6.31858 16.2085 5.64324 15.7078C4.9679 15.2071 4.46578 14.5079 4.207 13.708C4.456 13.745 4.706 13.77 4.968 13.77C5.329 13.77 5.692 13.72 6.029 13.633C5.11676 13.4489 4.29647 12.9544 3.70762 12.2337C3.11876 11.5131 2.79769 10.6107 2.799 9.68004V9.63004C3.336 9.92904 3.959 10.116 4.619 10.141C4.06609 9.77363 3.61272 9.27507 3.29934 8.68983C2.98596 8.1046 2.82231 7.4509 2.823 6.78704C2.823 6.03904 3.022 5.35304 3.371 4.75504C4.38314 6.00006 5.6455 7.0186 7.07634 7.7447C8.50717 8.4708 10.0746 8.88826 11.677 8.97004C11.615 8.67004 11.577 8.35904 11.577 8.04704C11.5767 7.518 11.6807 6.9941 11.8831 6.50528C12.0854 6.01646 12.3821 5.57232 12.7562 5.19823C13.1303 4.82414 13.5744 4.52745 14.0632 4.32512C14.5521 4.12279 15.076 4.01878 15.605 4.01904C16.765 4.01904 17.812 4.50504 18.548 5.29104C19.4498 5.11666 20.3145 4.78747 21.104 4.31804C20.8034 5.24886 20.1738 6.03815 19.333 6.53804C20.1328 6.44682 20.9144 6.2365 21.652 5.91404C21.1011 6.71714 20.4185 7.42139 19.633 7.99704Z" fill="#C4C4C4"/>
+                                </svg></a>
+                        </li>
+                        <li class="margin-02" style="margin-top: auto; margin-bottom: auto; margin-right: 1%;">
+                            <a href="https://www.instagram.com/nfhoneybadgers/" target="_blank" style="padding-left: 5%; padding-right: 5%;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M20.9471 8.30496C20.937 7.54758 20.7952 6.79773 20.5281 6.08896C20.2964 5.49111 19.9426 4.94816 19.4892 4.49479C19.0359 4.04142 18.4929 3.68761 17.8951 3.45596C17.1954 3.19331 16.4562 3.0513 15.7091 3.03596C14.7471 2.99296 14.4421 2.98096 12.0001 2.98096C9.55807 2.98096 9.24507 2.98096 8.29007 3.03596C7.54323 3.05141 6.80442 3.19343 6.10507 3.45596C5.50713 3.68745 4.96409 4.0412 4.5107 4.49459C4.05732 4.94798 3.70356 5.49102 3.47207 6.08896C3.2089 6.78809 3.06719 7.52707 3.05307 8.27396C3.01007 9.23696 2.99707 9.54196 2.99707 11.984C2.99707 14.426 2.99707 14.738 3.05307 15.694C3.06807 16.442 3.20907 17.18 3.47207 17.881C3.70395 18.4787 4.05797 19.0215 4.51151 19.4747C4.96505 19.9279 5.50813 20.2815 6.10607 20.513C6.8035 20.7862 7.54244 20.9383 8.29107 20.963C9.25407 21.006 9.55907 21.019 12.0011 21.019C14.4431 21.019 14.7561 21.019 15.7111 20.963C16.4582 20.9482 17.1974 20.8066 17.8971 20.544C18.4948 20.312 19.0376 19.9581 19.4909 19.5048C19.9442 19.0515 20.2982 18.5086 20.5301 17.911C20.7931 17.211 20.9341 16.473 20.9491 15.724C20.9921 14.762 21.0051 14.457 21.0051 12.014C21.0031 9.57196 21.0031 9.26196 20.9471 8.30496ZM11.9941 16.602C9.44007 16.602 7.37107 14.533 7.37107 11.979C7.37107 9.42496 9.44007 7.35596 11.9941 7.35596C13.2202 7.35596 14.396 7.84302 15.263 8.71C16.13 9.57698 16.6171 10.7529 16.6171 11.979C16.6171 13.2051 16.13 14.3809 15.263 15.2479C14.396 16.1149 13.2202 16.602 11.9941 16.602ZM16.8011 8.26296C16.6595 8.26309 16.5192 8.2353 16.3884 8.18117C16.2575 8.12704 16.1386 8.04764 16.0385 7.94751C15.9384 7.84738 15.859 7.72849 15.8049 7.59765C15.7507 7.4668 15.7229 7.32656 15.7231 7.18496C15.7231 7.04346 15.7509 6.90334 15.8051 6.77262C15.8592 6.64189 15.9386 6.5231 16.0387 6.42305C16.1387 6.32299 16.2575 6.24363 16.3882 6.18948C16.519 6.13533 16.6591 6.10746 16.8006 6.10746C16.9421 6.10746 17.0822 6.13533 17.2129 6.18948C17.3436 6.24363 17.4624 6.32299 17.5625 6.42305C17.6625 6.5231 17.7419 6.64189 17.7961 6.77262C17.8502 6.90334 17.8781 7.04346 17.8781 7.18496C17.8781 7.78096 17.3961 8.26296 16.8011 8.26296Z" fill="#C4C4C4"/>
+                                <path d="M11.9942 14.9821C13.6527 14.9821 14.9972 13.6376 14.9972 11.9791C14.9972 10.3206 13.6527 8.97607 11.9942 8.97607C10.3357 8.97607 8.99121 10.3206 8.99121 11.9791C8.99121 13.6376 10.3357 14.9821 11.9942 14.9821Z" fill="#C4C4C4"/>
+                                </svg></a>
+                        </li>
+                        <li class="margin-02" style="margin-top: auto; margin-bottom: auto; margin-right: 1%;">
+                            <a href="https://opensea.io/collection/nfhoneybadgers" target="_blank" style="padding-left: 5%; padding-right: 5%;"><svg width="20" height="20" viewBox="0 0 90 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M45 0C20.151 0 0 20.151 0 45C0 69.849 20.151 90 45 90C69.849 90 90 69.849 90 45C90 20.151 69.858 0 45 0ZM22.203 46.512L22.392 46.206L34.101 27.891C34.272 27.63 34.677 27.657 34.803 27.945C36.756 32.328 38.448 37.782 37.656 41.175C37.323 42.57 36.396 44.46 35.352 46.206C35.217 46.458 35.073 46.71 34.911 46.953C34.839 47.061 34.713 47.124 34.578 47.124H22.545C22.221 47.124 22.032 46.773 22.203 46.512ZM74.376 52.812C74.376 52.983 74.277 53.127 74.133 53.19C73.224 53.577 70.119 55.008 68.832 56.799C65.538 61.38 63.027 67.932 57.402 67.932H33.948C25.632 67.932 18.9 61.173 18.9 52.83V52.56C18.9 52.344 19.08 52.164 19.305 52.164H32.373C32.634 52.164 32.823 52.398 32.805 52.659C32.706 53.505 32.868 54.378 33.273 55.17C34.047 56.745 35.658 57.726 37.395 57.726H43.866V52.677H37.467C37.143 52.677 36.945 52.299 37.134 52.029C37.206 51.921 37.278 51.813 37.368 51.687C37.971 50.823 38.835 49.491 39.699 47.97C40.284 46.944 40.851 45.846 41.31 44.748C41.4 44.55 41.472 44.343 41.553 44.145C41.679 43.794 41.805 43.461 41.895 43.137C41.985 42.858 42.066 42.57 42.138 42.3C42.354 41.364 42.444 40.374 42.444 39.348C42.444 38.943 42.426 38.52 42.39 38.124C42.372 37.683 42.318 37.242 42.264 36.801C42.228 36.414 42.156 36.027 42.084 35.631C41.985 35.046 41.859 34.461 41.715 33.876L41.661 33.651C41.553 33.246 41.454 32.868 41.328 32.463C40.959 31.203 40.545 29.97 40.095 28.818C39.933 28.359 39.753 27.918 39.564 27.486C39.294 26.82 39.015 26.217 38.763 25.65C38.628 25.389 38.52 25.155 38.412 24.912C38.286 24.642 38.16 24.372 38.025 24.111C37.935 23.913 37.827 23.724 37.755 23.544L36.963 22.086C36.855 21.888 37.035 21.645 37.251 21.708L42.201 23.049H42.219C42.228 23.049 42.228 23.049 42.237 23.049L42.885 23.238L43.605 23.436L43.866 23.508V20.574C43.866 19.152 45 18 46.413 18C47.115 18 47.754 18.288 48.204 18.756C48.663 19.224 48.951 19.863 48.951 20.574V24.939L49.482 25.083C49.518 25.101 49.563 25.119 49.599 25.146C49.725 25.236 49.914 25.38 50.148 25.56C50.337 25.704 50.535 25.884 50.769 26.073C51.246 26.46 51.822 26.955 52.443 27.522C52.605 27.666 52.767 27.81 52.92 27.963C53.721 28.71 54.621 29.583 55.485 30.555C55.728 30.834 55.962 31.104 56.205 31.401C56.439 31.698 56.7 31.986 56.916 32.274C57.213 32.661 57.519 33.066 57.798 33.489C57.924 33.687 58.077 33.894 58.194 34.092C58.554 34.623 58.86 35.172 59.157 35.721C59.283 35.973 59.409 36.252 59.517 36.522C59.85 37.26 60.111 38.007 60.273 38.763C60.327 38.925 60.363 39.096 60.381 39.258V39.294C60.435 39.51 60.453 39.744 60.471 39.987C60.543 40.752 60.507 41.526 60.345 42.3C60.273 42.624 60.183 42.93 60.075 43.263C59.958 43.578 59.85 43.902 59.706 44.217C59.427 44.856 59.103 45.504 58.716 46.098C58.59 46.323 58.437 46.557 58.293 46.782C58.131 47.016 57.96 47.241 57.816 47.457C57.609 47.736 57.393 48.024 57.168 48.285C56.97 48.555 56.772 48.825 56.547 49.068C56.241 49.437 55.944 49.779 55.629 50.112C55.449 50.328 55.251 50.553 55.044 50.751C54.846 50.976 54.639 51.174 54.459 51.354C54.144 51.669 53.892 51.903 53.676 52.11L53.163 52.569C53.091 52.641 52.992 52.677 52.893 52.677H48.951V57.726H53.91C55.017 57.726 56.07 57.339 56.925 56.61C57.213 56.358 58.482 55.26 59.985 53.604C60.039 53.541 60.102 53.505 60.174 53.487L73.863 49.527C74.124 49.455 74.376 49.644 74.376 49.914V52.812V52.812Z"  fill="#C4C4C4"/>
+                                </svg></a>
+                        </li>
+                        <li class="margin-02" style="margin-top: auto; margin-bottom: auto; margin-right: 1%;">
+                            <a href="https://youtube.com/channel/UCyN2SzYbghlgzHfDsitclLA" target="_blank" style="padding-left: 5%; padding-right: 5%;">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="24" width="36" viewBox="-35.20005 -41.33325 305.0671 247.9995">
+                                    <path d="M93.333 117.559V47.775l61.334 34.893zm136.43-91.742c-2.699-10.162-10.651-18.165-20.747-20.881C190.716 0 117.333 0 117.333 0S43.951 0 25.651 4.936C15.555 7.652 7.603 15.655 4.904 25.817 0 44.236 0 82.667 0 82.667s0 38.429 4.904 56.849c2.699 10.163 10.65 18.165 20.747 20.883 18.3 4.934 91.682 4.934 91.682 4.934s73.383 0 91.683-4.934c10.096-2.718 18.048-10.72 20.747-20.883 4.904-18.42 4.904-56.85 4.904-56.85s0-38.43-4.904-56.849" fill="#C4C4C4"/></svg>
+                            </a>
+                        </li>
+                        <li class="margin-02 metahidebtn" style="margin-top:auto;">
+                            <button onclick="connect()" type="button"  class="btn btn-secondary"
+                            style="font-family:'Bios';font-style: normal;font-weight: 600;
+                            font-size: 14px; line-height: 16px; letter-spacing: 1px;
+                            color: #ffffff; background-color: #171717; border: 1px solid #363636;
+                            border-radius: 8px;">                             
+                                <span id="btn-secondary-02">CONNECT METAMASK</span> <img src="image/Fox.png" alt="" style="margin-left: 10px;">
+                            </button>
+                        </li>
+                    </ul>
+                    <!-- <ul class="navbar-nav mb-2 my-lg-0">
+                        
+                    </ul> -->
+                </div>
+            </div>
+        </nav>
+        
+        <div class="centerlogo">
+            <img src="image/full-onblack.png" class="logo-01" alt="" srcset="">
+
+        </div>
+        <!-- <img src="image/nfhb-onblack 1.png" class="logo-02" alt="" srcset=""> -->
+        <!-- <img class="hive-image" src="image/ezgif1.png" alt="The Hive City" width="2010px" height="1005px"> -->
+        <video id="tm-welcome-video" class="tm-welcome-video" autoplay="" loop="" muted="">
+            <source src="image/FinalBanner_highContrast.mp4" type="video/mp4"> Your browser does not support the video tag.
+            </video>
+
+            <!-- <button onclick="connect()" type="button"  class="btn btn-secondary metashowbtn"
+                            style="font-family:'Bios';font-style: normal;font-weight: 600;
+                            font-size: 14px; line-height: 16px; letter-spacing: 1px;
+                            color: #ffffff; background-color: #171717; border: 1px solid #363636;
+                            border-radius: 8px;">                             
+                                <span id="btn-secondary-10">CONNECT METAMASK</span> <img src="image/Fox.png" alt="" style="margin-left: 10px;">
+                            </button> -->
+           
+        
+        <div class="hive-display-left hive-padding-large " id="hive-display-left" id="moveupWelcome">
+            <div class="hive-content element-coverage" id="topbg" style="width: 95%!important;">
+                <div class="hive-content-coverage">
+                    <div class="hive-text-starting-01 margin-01 hide-top-content">
+                        <img src="image/Title.png" height="50%" width="80%" alt="">
+                    </div>
+                </div>
+
+                <div class="hive-text-02 hide-content-01" id="display-content-01" style="width: 85%!important;
+                 margin-left: 10%;"
+                    id="moveupWelcome">
+                    Home of the <span style="color: transparent;" class="gradient-text">Honey Badgers 
+                        <!-- <br></span>on the <span class="gradient-text">Ethereum</span> Network -->
+                </div>
+            </div>
+            
+        </div>
+        
+
+    </header>
+    <div class="mobile-opt-02">
+        <img src="image/Title.png" height="" width="100%" alt="" style="padding-top: 10%;">
+        <div style="font-style: normal;font-weight: 700; font-family: Space Mono; font-size: 18px; color: #FFFFFF;
+                    padding-left: 25px; width: 90%; padding-top: 5%;">
+            Home of the Honey Badgers
+        </div>
+        <!-- <div style="width: 85%;margin-left: auto; margin-right: auto; background-image: url('image/launch-date-box.png'); background-size: 100% 100%;">
+            Enter
+        </div> -->
+        <div style="margin-left: auto; margin-right: auto; padding-top: 3%; width: 90%;">
+            <a href="Solicity.html"> <button class="enter-solicity" style="background-image: url('image/launch-date-box.png');">
+                Enter
+            </button></a>
+        </div>
+    </div>
+    <div style="background-color: #000000;width: 100%; z-index: 1;" class="mobile-opt-01">
+        <section id="story-hidden-desktop websitecontainer websitecentralised">
+
+            <div class="storyadj websitecontainer websitecentralised">
+    
+                <div class="hive-content element-story gradient-border" id="hive-content-id">
+                    <img class="claw-image-story" alt="" src="image/Frame349.png">
+                    <div class="heading-css hive-text-starting-01" id="story-heading">
+                        THE LEGEND
+                    </div>
+                    <div class="row" id="story-block-04">
+                        <div class="margin-11"> </div>
+                        <div id="story-block-03"></div>
+                        <div class="margin-11" id="story-block-01" class="left-story">
+                            <p id="id-01">It was a day after the Great Flippening that the signal was first received. The small packet of data came from a wallet untouched since the First Fork, beyond memories, but frozen in time on the blockchain. 
+                                <br><br>
+                                Since then, a string of cryptic messages started arriving from Base 721, the HoneyBadger settlement in the world above which was lost centuries ago in the aftermath of the Second Fork War.
+                                <br><br>
+    
+                                The decrypted message was simple, yet terrifying --<b> re-capture Base 721</b> --accompanied by a 24-digit seed phrase.
+                                <span id="disp_toggler2" class="disp_tog">
+                                With their thick skin and super-sized attitude, the Honey Badgers exist peacefully in SoliCity, foraging for food, altcoins and airdrops. Their way of life is sustainable shilling and Hodling for life, creating decades of generational wealth. 
+                                <br><br>
+                                On weekend benders, when they’ve had one-too-many shots of their favourite selection of freshly squeezed snake venom, the HoneyBadgers indulge themselves by foraging for those lost lost relics, the invaluable ancient NFT artefacts.
+                                </div>
+                                </span>
+                        <div id="story-block-05"></div>
+                        <div class="margin-11" id="story-block-01" class="right-story">
+                            <p id="id-01">So why leave this little utopia that they have created, in the search for something completely unknown? As any modern civilisation when faced with an existential uncertainty would do, the Honeybadgers set upon their journey to find the truth.
+                                <br> <br>But what challenges and horrors are they to find along this path?
+
+                                <br><br>
+                                It is time to introduce these 10,000 truly non-fungible creatures. Immune to the venom of snakes and society, these HoneyBadgers are now on a quest to find the truth behind what really happened at Base 721.
+                                <br><br>
+                                <span id="disp_toggler" class="disp_tog">
+                                    The legend of these HoneyBadgers mirror the journey of every crypto HODLer and believer. These NFTs immortalise the resilience, the tenacity and the strength of these HoneyBadgers.
+                                    They are a monument to the characteristics of every player, big and small, in the cryptoverse; those who stand strong together in the face of adversity, with an unrelenting belief in changing the fundamentals of the system. <i> Sometimes, the only way forward is to just not care. </i>
+                                </span>
+                        </div>
+                        <div id="story-block-03"></div>
+                        <div class="margin-11"> </div>
+    
+                    <div class="heading-css-2 hive-text-starting-02">
+                        <span style="cursor: pointer; color: #FFBC45;" id="readmore" onclick="showhide()">READ MORE</span>
+                        <img src="image/arrow-up.png" class="" id="arrow" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- <section id="story-hidden-mobile">
+            <div class="storyadj">
+                <div class="hive-content element-story" id="hive-content-id">
+                    <img class="claw-image-story" alt="" src="image/Frame349.png">
+                    <div class="heading-css hive-text-starting-01">
+                        THE LEGEND
+                    </div>
+                    <div class="row" id="story-block-04">
+                        <div id="story-block-03"></div>
+                        <div class="" id="story-block-01" class="left-story">
+                            <p id="id-01">It was a day after the Great Flippening that the signal was first received.
+                                The small packet of data came from a wallet untouched since the First Fork, beyond memories,
+                                but frozen in time on the blockchain.</p>
+                        </div>
+                        
+                    </div>
+
+                    <div id="disp_toggler3" class="disp_tog">
+                    <div class="row" id="story-block-04">
+                        <div class="margin-11"> </div>
+                        <div id="story-block-03"></div>
+                        <div class="margin-11" id="story-block-01" class="left-story">
+                            <p id="id-01">Since then, a string of cryptic messages started arriving from Base 721, the HoneyBadger
+                                settlement in the world above which was lost centuries ago in the aftermath of the second
+                                Fork war.</p>
+                        </div>
+                        
+                    </div>
+
+
+                    
+                        <div class="row" id="story-block-04">
+                            <div class="margin-11"> </div>
+                            <div id="story-block-03"></div>
+                            <div class="margin-11" id="story-block-01" class="left-story">
+                                <p id="id-01">The decrypted message was simple, yet terrifying -- re-capture Base 721, accompanied by a
+                                    24-digit seed phrase</p>
+                            </div>
+                            <div id="story-block-03"></div>
+                            <div id="story-block-03"></div>
+                            <div class="margin-11" id="story-block-01" class="right-story">
+                                <p id="id-01">With their thick skins and super-sized attitudes, our HoneyBadgers have existed peacefully in
+                                    their underground haven, SoliCity, for centuries. Their way of life has been sustainable
+                                    shilling and HODLing for life, creating many decades of generational wealth. 
+                                    On weekend
+                                    benders, when they’ve had one-too-many shots of their favorite selection of freshly squeezed
+                                    snake venom, the HoneyBadgers indulge themselves by foraging for altcoins, airdrops and
+                                    invaluable ancient NFT artefacts.</p>
+                            </div>
+                            <div id="story-block-03"></div>
+                            <div class="margin-11"> </div>
+                        </div>
+                        <div class="row" id="story-block-04">
+                            <div class="margin-11"> </div>
+                            <div id="story-block-03"></div>
+                            <div class=" margin-11" id="story-block-01">
+                                <p id="id-01" id="left-story">So why leave this little utopia that they have created, in the search for something completely
+                                    unknown?
+                                    
+                                        As any modern civilisation when faced with an existential uncertainty would do,
+                                        the Honeybadgers set upon their journey to find the truth. But what challenges and horrors
+                                        are they to find along this path?
+                                    
+                                </p>
+                            </div>
+                            <div id="story-block-03"></div>
+                            <div id="story-block-03"></div>
+                            <div class="margin-11" id="story-block-01" class="right-story">
+                                <p id="id-01">It is time to introduce these 10,000 truly non-fungible creatures. Immune to the venom of
+                                    snakes and society, these HoneyBadgers are now on a quest to find the truth behind what
+                                    really happened at Base 721.
+                                    </p>
+                            </div>
+                            <div id="story-block-03"></div>
+                            <div class="margin-11"> </div>
+                        </div>
+                        <div>
+                            <div class="row" id="story-block-04">
+                                <div class="margin-11"> </div>
+                                <div id="story-block-03"></div>
+                                <div class="margin-11" id="story-block-01" class="left-story">
+                                    <p id="id-01">The legend of these HoneyBadgers mirror the journey of every crypto HODLer and believer.
+                                        These NFTs immortalize the resilience, the tenacity and the strength of these HoneyBadgers.
+                                    </p>
+                                </div>
+                                <div id="story-block-03"></div>
+                                <div id="story-block-03"></div>
+                                <div class="margin-11" id="story-block-01" class="right-story">
+                                    <p id="id-01">They are a monument to the characteristics of every player, big and small, in the cryptoverse;
+                                        those who stand strong together in the face of adversity, with an unrelenting belief in
+                                        changing the fundamentals of the system. Sometimes, the only way forward is to just not
+                                        care.</p>
+                                </div>
+                                <div id="story-block-03"></div>
+                                <div class="margin-11"> </div>
+                            </div>
+                        </div>
+                    
+                    </div>
+                    
+    
+                    <div class="heading-css-2 hive-text-starting-02">
+                        <span style="cursor: pointer; color: #FFBC45;" id="readmoremob" onclick="showhide7()">READ MORE</span>
+                        <img src="image/arrow-up.png" class="" id="arrow2" alt="">
+                    </div>
+                </div>
+            </div>
+        </section> -->
+    </div>
+
+    <div class="mobile-opt-02 container-footer" style="text-align: center; background-color: #171717;position: absolute; bottom: 0; width: 100%; ">
+        <footer style="vertical-align: middle; padding: 3%;">
+            <!-- <img src="image/discore.png" style="padding-left: 5%; padding-right: 5%;" width="60px" alt=""> -->
+            <a href="https://discord.gg/SU7uf7RPn4" target="_blank" style="padding-left: 3%; padding-right: 3%;"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M14.8199 4.25977C14.6213 4.61545 14.4443 4.98279 14.2899 5.35977C12.7727 5.11982 11.2272 5.11982 9.70992 5.35977C9.55551 4.98279 9.37852 4.61545 9.17992 4.25977C7.75071 4.50397 6.36132 4.9413 5.04992 5.55977C2.70486 8.94405 1.64135 13.0527 2.04992 17.1498C3.57815 18.2986 5.29337 19.1748 7.11992 19.7398C7.53583 19.1904 7.90702 18.6085 8.22992 17.9998C7.63399 17.78 7.06121 17.502 6.51992 17.1698C6.66838 17.071 6.80881 16.9606 6.93992 16.8398C8.51838 17.6001 10.2479 17.9949 11.9999 17.9949C13.7519 17.9949 15.4815 17.6001 17.0599 16.8398C17.1999 16.9598 17.3399 17.0698 17.4799 17.1698C16.9357 17.4994 16.3635 17.7805 15.7699 18.0098C16.0794 18.6323 16.4407 19.2277 16.8499 19.7898C18.6742 19.2268 20.3864 18.3504 21.9099 17.1998C22.3283 13.102 21.2639 8.98995 18.9099 5.60977C17.6132 4.9785 16.2376 4.52444 14.8199 4.25977ZM8.67992 14.8098C8.1795 14.7738 7.71246 14.5455 7.37684 14.1725C7.04121 13.7996 6.86311 13.3112 6.87992 12.8098C6.86058 12.3077 7.0378 11.8178 7.37393 11.4444C7.71005 11.0709 8.17858 10.8432 8.67992 10.8098C9.18126 10.8432 9.64978 11.0709 9.9859 11.4444C10.322 11.8178 10.4993 12.3077 10.4799 12.8098C10.4993 13.3119 10.322 13.8017 9.9859 14.1752C9.64978 14.5486 9.18126 14.7763 8.67992 14.8098ZM15.3199 14.8098C14.8195 14.7738 14.3525 14.5455 14.0168 14.1725C13.6812 13.7996 13.5031 13.3112 13.5199 12.8098C13.5006 12.3077 13.6778 11.8178 14.0139 11.4444C14.3501 11.0709 14.8186 10.8432 15.3199 10.8098C15.8222 10.8407 16.2922 11.0677 16.6289 11.4417C16.9655 11.8158 17.1418 12.307 17.1199 12.8098C17.1418 13.3125 16.9655 13.8038 16.6289 14.1778C16.2922 14.5519 15.8222 14.7788 15.3199 14.8098Z" fill="#C4C4C4"/>
+                </svg></a>
+                
+            <!-- <img src="image/twitter.png" style="padding-left: 5%; padding-right: 5%;" width="60px" alt=""> -->
+            <a href="https://twitter.com/NFHoneyBadgers" target="_blank" style="padding-left: 3%; padding-right: 3%;"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M19.633 7.99704C19.646 8.17204 19.646 8.34604 19.646 8.52004C19.646 13.845 15.593 19.981 8.186 19.981C5.904 19.981 3.784 19.32 2 18.172C2.324 18.209 2.636 18.222 2.973 18.222C4.78599 18.2264 6.54765 17.6202 7.974 16.501C7.13342 16.4858 6.31858 16.2085 5.64324 15.7078C4.9679 15.2071 4.46578 14.5079 4.207 13.708C4.456 13.745 4.706 13.77 4.968 13.77C5.329 13.77 5.692 13.72 6.029 13.633C5.11676 13.4489 4.29647 12.9544 3.70762 12.2337C3.11876 11.5131 2.79769 10.6107 2.799 9.68004V9.63004C3.336 9.92904 3.959 10.116 4.619 10.141C4.06609 9.77363 3.61272 9.27507 3.29934 8.68983C2.98596 8.1046 2.82231 7.4509 2.823 6.78704C2.823 6.03904 3.022 5.35304 3.371 4.75504C4.38314 6.00006 5.6455 7.0186 7.07634 7.7447C8.50717 8.4708 10.0746 8.88826 11.677 8.97004C11.615 8.67004 11.577 8.35904 11.577 8.04704C11.5767 7.518 11.6807 6.9941 11.8831 6.50528C12.0854 6.01646 12.3821 5.57232 12.7562 5.19823C13.1303 4.82414 13.5744 4.52745 14.0632 4.32512C14.5521 4.12279 15.076 4.01878 15.605 4.01904C16.765 4.01904 17.812 4.50504 18.548 5.29104C19.4498 5.11666 20.3145 4.78747 21.104 4.31804C20.8034 5.24886 20.1738 6.03815 19.333 6.53804C20.1328 6.44682 20.9144 6.2365 21.652 5.91404C21.1011 6.71714 20.4185 7.42139 19.633 7.99704Z" fill="#C4C4C4"/>
+                </svg></a>
+                
+            <!-- <img src="image/instagram.png" style="padding-left: 5%; padding-right: 5%;" width="60px" alt=""> -->
+            <a href="https://www.instagram.com/nfhoneybadgers" target="_blank" style="padding-left: 3%; padding-right: 3%;"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20.9471 8.30496C20.937 7.54758 20.7952 6.79773 20.5281 6.08896C20.2964 5.49111 19.9426 4.94816 19.4892 4.49479C19.0359 4.04142 18.4929 3.68761 17.8951 3.45596C17.1954 3.19331 16.4562 3.0513 15.7091 3.03596C14.7471 2.99296 14.4421 2.98096 12.0001 2.98096C9.55807 2.98096 9.24507 2.98096 8.29007 3.03596C7.54323 3.05141 6.80442 3.19343 6.10507 3.45596C5.50713 3.68745 4.96409 4.0412 4.5107 4.49459C4.05732 4.94798 3.70356 5.49102 3.47207 6.08896C3.2089 6.78809 3.06719 7.52707 3.05307 8.27396C3.01007 9.23696 2.99707 9.54196 2.99707 11.984C2.99707 14.426 2.99707 14.738 3.05307 15.694C3.06807 16.442 3.20907 17.18 3.47207 17.881C3.70395 18.4787 4.05797 19.0215 4.51151 19.4747C4.96505 19.9279 5.50813 20.2815 6.10607 20.513C6.8035 20.7862 7.54244 20.9383 8.29107 20.963C9.25407 21.006 9.55907 21.019 12.0011 21.019C14.4431 21.019 14.7561 21.019 15.7111 20.963C16.4582 20.9482 17.1974 20.8066 17.8971 20.544C18.4948 20.312 19.0376 19.9581 19.4909 19.5048C19.9442 19.0515 20.2982 18.5086 20.5301 17.911C20.7931 17.211 20.9341 16.473 20.9491 15.724C20.9921 14.762 21.0051 14.457 21.0051 12.014C21.0031 9.57196 21.0031 9.26196 20.9471 8.30496ZM11.9941 16.602C9.44007 16.602 7.37107 14.533 7.37107 11.979C7.37107 9.42496 9.44007 7.35596 11.9941 7.35596C13.2202 7.35596 14.396 7.84302 15.263 8.71C16.13 9.57698 16.6171 10.7529 16.6171 11.979C16.6171 13.2051 16.13 14.3809 15.263 15.2479C14.396 16.1149 13.2202 16.602 11.9941 16.602ZM16.8011 8.26296C16.6595 8.26309 16.5192 8.2353 16.3884 8.18117C16.2575 8.12704 16.1386 8.04764 16.0385 7.94751C15.9384 7.84738 15.859 7.72849 15.8049 7.59765C15.7507 7.4668 15.7229 7.32656 15.7231 7.18496C15.7231 7.04346 15.7509 6.90334 15.8051 6.77262C15.8592 6.64189 15.9386 6.5231 16.0387 6.42305C16.1387 6.32299 16.2575 6.24363 16.3882 6.18948C16.519 6.13533 16.6591 6.10746 16.8006 6.10746C16.9421 6.10746 17.0822 6.13533 17.2129 6.18948C17.3436 6.24363 17.4624 6.32299 17.5625 6.42305C17.6625 6.5231 17.7419 6.64189 17.7961 6.77262C17.8502 6.90334 17.8781 7.04346 17.8781 7.18496C17.8781 7.78096 17.3961 8.26296 16.8011 8.26296Z" fill="#C4C4C4"/>
+                <path d="M11.9942 14.9821C13.6527 14.9821 14.9972 13.6376 14.9972 11.9791C14.9972 10.3206 13.6527 8.97607 11.9942 8.97607C10.3357 8.97607 8.99121 10.3206 8.99121 11.9791C8.99121 13.6376 10.3357 14.9821 11.9942 14.9821Z" fill="#C4C4C4"/>
+                </svg>
+            </a>
+            
+            <a href="https://opensea.io/collection/nfhoneybadgers" target="_blank" style="padding-left: 3%; padding-right: 3%;"><svg width="30" height="30" viewBox="0 0 90 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M45 0C20.151 0 0 20.151 0 45C0 69.849 20.151 90 45 90C69.849 90 90 69.849 90 45C90 20.151 69.858 0 45 0ZM22.203 46.512L22.392 46.206L34.101 27.891C34.272 27.63 34.677 27.657 34.803 27.945C36.756 32.328 38.448 37.782 37.656 41.175C37.323 42.57 36.396 44.46 35.352 46.206C35.217 46.458 35.073 46.71 34.911 46.953C34.839 47.061 34.713 47.124 34.578 47.124H22.545C22.221 47.124 22.032 46.773 22.203 46.512ZM74.376 52.812C74.376 52.983 74.277 53.127 74.133 53.19C73.224 53.577 70.119 55.008 68.832 56.799C65.538 61.38 63.027 67.932 57.402 67.932H33.948C25.632 67.932 18.9 61.173 18.9 52.83V52.56C18.9 52.344 19.08 52.164 19.305 52.164H32.373C32.634 52.164 32.823 52.398 32.805 52.659C32.706 53.505 32.868 54.378 33.273 55.17C34.047 56.745 35.658 57.726 37.395 57.726H43.866V52.677H37.467C37.143 52.677 36.945 52.299 37.134 52.029C37.206 51.921 37.278 51.813 37.368 51.687C37.971 50.823 38.835 49.491 39.699 47.97C40.284 46.944 40.851 45.846 41.31 44.748C41.4 44.55 41.472 44.343 41.553 44.145C41.679 43.794 41.805 43.461 41.895 43.137C41.985 42.858 42.066 42.57 42.138 42.3C42.354 41.364 42.444 40.374 42.444 39.348C42.444 38.943 42.426 38.52 42.39 38.124C42.372 37.683 42.318 37.242 42.264 36.801C42.228 36.414 42.156 36.027 42.084 35.631C41.985 35.046 41.859 34.461 41.715 33.876L41.661 33.651C41.553 33.246 41.454 32.868 41.328 32.463C40.959 31.203 40.545 29.97 40.095 28.818C39.933 28.359 39.753 27.918 39.564 27.486C39.294 26.82 39.015 26.217 38.763 25.65C38.628 25.389 38.52 25.155 38.412 24.912C38.286 24.642 38.16 24.372 38.025 24.111C37.935 23.913 37.827 23.724 37.755 23.544L36.963 22.086C36.855 21.888 37.035 21.645 37.251 21.708L42.201 23.049H42.219C42.228 23.049 42.228 23.049 42.237 23.049L42.885 23.238L43.605 23.436L43.866 23.508V20.574C43.866 19.152 45 18 46.413 18C47.115 18 47.754 18.288 48.204 18.756C48.663 19.224 48.951 19.863 48.951 20.574V24.939L49.482 25.083C49.518 25.101 49.563 25.119 49.599 25.146C49.725 25.236 49.914 25.38 50.148 25.56C50.337 25.704 50.535 25.884 50.769 26.073C51.246 26.46 51.822 26.955 52.443 27.522C52.605 27.666 52.767 27.81 52.92 27.963C53.721 28.71 54.621 29.583 55.485 30.555C55.728 30.834 55.962 31.104 56.205 31.401C56.439 31.698 56.7 31.986 56.916 32.274C57.213 32.661 57.519 33.066 57.798 33.489C57.924 33.687 58.077 33.894 58.194 34.092C58.554 34.623 58.86 35.172 59.157 35.721C59.283 35.973 59.409 36.252 59.517 36.522C59.85 37.26 60.111 38.007 60.273 38.763C60.327 38.925 60.363 39.096 60.381 39.258V39.294C60.435 39.51 60.453 39.744 60.471 39.987C60.543 40.752 60.507 41.526 60.345 42.3C60.273 42.624 60.183 42.93 60.075 43.263C59.958 43.578 59.85 43.902 59.706 44.217C59.427 44.856 59.103 45.504 58.716 46.098C58.59 46.323 58.437 46.557 58.293 46.782C58.131 47.016 57.96 47.241 57.816 47.457C57.609 47.736 57.393 48.024 57.168 48.285C56.97 48.555 56.772 48.825 56.547 49.068C56.241 49.437 55.944 49.779 55.629 50.112C55.449 50.328 55.251 50.553 55.044 50.751C54.846 50.976 54.639 51.174 54.459 51.354C54.144 51.669 53.892 51.903 53.676 52.11L53.163 52.569C53.091 52.641 52.992 52.677 52.893 52.677H48.951V57.726H53.91C55.017 57.726 56.07 57.339 56.925 56.61C57.213 56.358 58.482 55.26 59.985 53.604C60.039 53.541 60.102 53.505 60.174 53.487L73.863 49.527C74.124 49.455 74.376 49.644 74.376 49.914V52.812V52.812Z"  fill="#C4C4C4"/>
+                </svg>
+            </a>
+            <a href="https://youtube.com/channel/UCyN2SzYbghlgzHfDsitclLA" target="_blank" style="padding-left: 3%; padding-right: 3%;">
+                <svg xmlns="http://www.w3.org/2000/svg" height="36" width="54" viewBox="-35.20005 -41.33325 305.0671 247.9995">
+                    <path d="M93.333 117.559V47.775l61.334 34.893zm136.43-91.742c-2.699-10.162-10.651-18.165-20.747-20.881C190.716 0 117.333 0 117.333 0S43.951 0 25.651 4.936C15.555 7.652 7.603 15.655 4.904 25.817 0 44.236 0 82.667 0 82.667s0 38.429 4.904 56.849c2.699 10.163 10.65 18.165 20.747 20.883 18.3 4.934 91.682 4.934 91.682 4.934s73.383 0 91.683-4.934c10.096-2.718 18.048-10.72 20.747-20.883 4.904-18.42 4.904-56.85 4.904-56.85s0-38.43-4.904-56.849" fill="#C4C4C4"/></svg>
+            </a>
+                
+
+           
+                
+
+            </footer>
+        <!-- <img src="image/badgerflatcolor2.png" width="150px" class="badgerlanding" alt=""> -->
+    </div>
+    
+    
+    <!-- <div style="text-align: center;" >
+        <input type="number" class="mint-input" id="number" placeholder="Enter the number you want to mint"><br>
+        <button onclick="mint()" class="btn btn-secondary" style="margin-top: 1%;
+            width: 100px;height: 50px; background-color: rgba(34, 32, 32, 0.753); font-size: 20px;
+            font-weight: 500; letter-spacing: 2px;">Mint</button>
+    </div> -->
+    
+    <div class="mobile-opt-01" style="width: 100%; background-color: #000000; height: 120px;">
+
+    </div>
+    <!-- <div class="mobile-opt-01">
+        <div style="background-image: url(image/grains.png);
+        background-color: #272727;
+        backdrop-filter: blur(8px);
+        width: 90%;
+        height: 180px;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 16px;
+        z-index: 2;
+        border: 1px solid gray;">
+            <div style="z-index: 1;">
+                <div class="launching" style="font-family: Bios;
+                    text-align: center;
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 32px;
+                    line-height: 34px;
+                    letter-spacing: 1px;
+                    color: #FFBC4A;
+                    padding-top: 5%;">
+                    Launching in December 2021
+                </div>
+                <div style="color: #FFFFFF;
+                    font-family: 'Space mono';
+                    text-align: center;
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: 20px;
+                    line-height: 24px;
+                    padding-top:10px ;">
+                    Date to be announced soon
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <!-- <div style="background-color: #000000; text-align: center;" class="mobile-opt-01 websitecontainer websitecentralised">
+        <img src="image/004.png" class="launchdate" style=" width: 40%;" alt="">
+    </div> -->
+
+    <div id="yellowbox" style=" background-color: #000000; text-align: center;" class="mobile-opt-01 websitecontainer websitecentralised yellowadd">
+        <div style="margin-left: auto; padding: 3%; width: 60%; margin-right: auto; text-align: center; background-image: url('image/0041.png'); z-index: 100; background-repeat: no-repeat; background-size: 100% 100%;">
+            <span class="launch"> Pre-Sale Date </span><span class="launchhead">: 18th January 2022 </span><br>
+            <span class="launch"> Whitelist Spots available </span><span class="launchhead">: 350</span> <br>
+            <span class="launch"> Mint Price </span><span class="launchhead">: 0.04 ETH + gas</span> <br><br>
+            <span class="launch">Public Sale Date </span><span class="launchhead">: 20th January 2022</span> <br>
+            <span class="launch"> Mint Price </span><span class="launchhead">: 0.05 ETH + gas</span> <br><br>
+            
+            <div style="width: 70%; margin-left: auto; margin-right: auto;">
+                <span class="launchhead" style="font-weight:800; font-size: 20px; width: 70%;"> Join our <a href="https://discord.gg/SU7uf7RPn4" target="_blank" style="color: #272727; text-decoration: none;"> Discord </a> NOW to get whitelisted before spots run out!
+
+            </div>
+        </div>
+        
+    </div>
+    
+    <div id="yellowbox2" style=" background-color: #000000; text-align: center;" class="mobile-opt-01 websitecontainer websitecentralised yellowremove">
+        <div class="heading-css rarity-margin-04 hive-text-starting-01 "style="margin-bottom: 60px;">
+            Pre-Sale is now Live !
+        </div>
+        <div class="mintbox gradient-member">
+            <div class="row">
+                <div class="col-lg-2">
+                    <img src="image/Anouncement Badger.png" class="mintbadgers" alt="">
+                </div>
+                <div 
+                class="col-lg-5 minttext">
+                    Mint your Badgers now ! 
+                    <div style="font-family: 'Space mono'; font-size: 20px;font-weight: 500; color: #FFFFFF; padding: 20px 20px 20px 20px ;">
+                        You can mint upto <span id="mintvalue"></span> Badgers 
+                    </div>
+                </div>
+                <div class="col-lg-3" style="margin-top: auto; margin-bottom: auto;">
+                    <input type="number" class="mint-input" id="number" placeholder="Amount to Mint(1-3)"><br>
+                </div>
+                <div class="col-lg-2" style="margin-top: auto; margin-bottom: auto;">
+                    <button onclick="preSale()" class="btn btn-secondary" style="
+                    width: 100px; height: 50px; background-color: #FFBC45; font-size: 20px; font-family: 'Space mono'; color: #000000;
+                    font-weight: 500; font-weight: bolder; letter-spacing: 2px;">MINT</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    
+
+    <div class="mobile-opt-01" style="width: 100%; background-color: #000000; height: 90px;"id="anomalies">
+
+    </div>
+
+    <div class="rarity-01 mobile-opt-01 websitecontainer websitecentralised" style="width: 100%!important; background-color: #000000;" >
+        <div class="heading-css rarity-margin-04 hive-text-starting-01 "style="margin-bottom: 60px;">
+            Anatomy of our Honey Badgers        
+        </div>
+        <!-- <P class="rarity-color-05">
+            Undoubtedly Distinctive Part
+        </div> -->
+    <!-- <img class="hive-image" src="image/final-hologram1.png" alt="The Hive City" width="2500"> -->
+    <div onclick="anatomy()">
+        <video id="tm-welcome-video-01" class="tm-welcome-video show-101" autoplay="" loop muted> 
+            <source src="image/bagderHolo3.mp4" type="video/mp4"> Your browser does not support the video tag.
+        </video>
+    </div>
+    
+
+    <div onclick="anatomy()">
+        <img id="safari-browser" class="hive-image hide-101" src="image/final-hologram (2).png" alt="The Hive City" width="2500">
+    </div>
+    
+
+    <div class="rarity-01 container roadmap03" id="roadmap-id-01">
+        <div class="heading-css rarity-margin-04 hive-text-starting-01" style="padding-top: 120px; padding-bottom: 60px;">
+            Civilisation Expansion Plan
+        </div>
+        <!-- <div>
+            <P class="rarity-color-05" id="roadmap-id-02">
+                The NF Honey Badgers are undoubtedly distinctive. Here are some of the features that make us second to
+                none.
+            </P>
+        </div> -->
+    </div>
+    </div>
+    <section class="roadmaptube mobile-opt-01">
+        <img src="image/image31.png" alt="" class="roadmap-badger-01">
+        <div style="margin-top: -14%;">
+        </div>
+        <div>
+            <img src="image/WithoutTail.png" class="badgerhoney sticky" alt="" srcset="">
+        
+
+
+        <div id="roadmap-id-04">
+            <div class="row" id="tube-content-01">
+                <div class="col-lg-4 col-md-4 col-sm-4" id="tube01">
+                    <img src="image/TubeUpdated.png" class="tube" alt="" srcset="">
+                </div>
+            </div>
+            <div class="row" style="margin-top: -630%;">
+
+                <div class="" id="roadmap-id-05">
+                    <div style="
+                            font-family: Space mono;
+                            font-style: normal;
+                            font-weight: 600;
+                            font-size: 14px;
+                            line-height: 16px;
+                            color: #ffffff;
+                            text-align: left;
+                            letter-spacing: 1px;
+                        ">
+                        STAGE I
+                    </div>
+                    <div class="roadmap-content-heading">
+                        SOLICITY
+                    </div>
+                    <div class="roadmap-content-paragraph">
+                        <p>
+                            The tunnels to SoliCity are open. Each Honeybadger has the
+                            privilege of accessing our crypto-only civilisation in the burrows
+                            via our private Discord Channel.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+
+                <div class="" id="roadmap-id-05">
+                    <div style="
+                            font-family: Space mono;
+                            font-style: normal;
+                            font-weight: 600;
+                            font-size: 14px;
+                            line-height: 16px;
+                            color: #ffffff;
+                            letter-spacing: 1px;
+                            text-align: left;
+                        ">
+                        STAGE II
+                    </div>
+                    <div class="roadmap-content-heading">
+                        Rewards program
+                    </div>
+                    <div class="roadmap-content-paragraph">
+                        <p style="text-align: justify;">
+                            A set of NF Honey Badgers shall be reserved for meme competitions and various other community activities. 
+                            Let us storm the internet and make Honey Badgers the ultimate meme again!
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="row">
+
+                <div class="" id="roadmap-id-05">
+                    <div style="
+                            font-family: Space mono;
+                            font-style: normal;
+                            font-weight: 600;
+                            font-size: 14px;
+                            line-height: 16px;
+                            color: #ffffff;
+                            letter-spacing: 1px;
+                            text-align: left;
+                        ">
+                        STAGE III
+                    </div>
+                    <div class="roadmap-content-heading">
+                        Larvae Loot
+                    </div>
+                    <div class="roadmap-content-paragraph">
+                        <p style="text-align: justify;">
+                            Everyone's a winner! 50% of the royalties received from Opensea 
+                            shall be distributed as rewards to the Honey Badgers. Guaranteed.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row">
+
+                <div class="" id="roadmap-id-05">
+                    <div style="
+                            font-family: Space mono;
+                            font-style: normal;
+                            font-weight: 600;
+                            font-size: 14px;
+                            line-height: 16px;
+                            color: #ffffff;
+                            letter-spacing: 1px;
+                            text-align: left;
+                        " id="honeybadgerscare1">
+                        STAGE IV
+                    </div>
+                    <div class="roadmap-content-heading">
+                        Honeypot
+                    </div>
+                    <div class="roadmap-content-paragraph">
+                        <p style="text-align: justify;">
+                            Building something strong and sustainable requires resources. 30% of royalties 
+                            goes back to the community treasury. This will be used to develop the project, 
+                            build strategic partnerships, to expand the community and extend the borders of Solicity.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row">
+
+                <div class="col-lg-3 col-md-3" id="roadmap-id-05">
+                    <div style="
+                            font-family: Space mono;
+                            font-style: normal;
+                            font-weight: 600;
+                            font-size: 14px;
+                            line-height: 16px;
+                            color: #ffffff;
+                            letter-spacing: 1px;
+                            text-align: left;
+                        ">
+                        STAGE V
+                    </div>
+                    <div class="roadmap-content-heading" >
+                        Honey Badgers do care!
+                    </div>
+                    <div class="roadmap-content-paragraph">
+                        <p style="text-align: justify;">
+                            10% of the community treasury shall be donated to climate change and wildlife
+                             conservation charities every month, as voted for by the Honey Badgers on Discord and Twitter.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row">
+
+                <div class="col-lg-3 col-md-3" id="roadmap-id-05">
+                    <div style="
+                            font-family: Space mono;
+                            font-style: normal;
+                            font-weight: 600;
+                            font-size: 14px;
+                            line-height: 16px;
+                            color: #ffffff;
+                            letter-spacing: 1px;
+                            text-align: left;
+                        ">
+                        STAGE VI
+                    </div>
+                    <div class="roadmap-content-heading">
+                        Honey-Badges
+                    </div>
+                    <div class="roadmap-content-paragraph">
+                        <p style="text-align: justify;">
+                            Each Honey Badgers will be proudly presented with a Badge NFT. Bespoke, 
+                            limited edition and handcrafted 3D badges that will stand as proof-of-tenacity of the Honey Badgers.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+                <div class="row">
+
+                    <div class="col-lg-3 col-md-3" id="roadmap-id-05">
+                        <div style="
+                                font-family: Space mono;
+                                font-style: normal;
+                                font-weight: 600;
+                                font-size: 14px;
+                                line-height: 16px;
+                                color: #ffffff;
+                                letter-spacing: 1px;
+                                text-align: left;
+                            ">
+                            STAGE VII
+                        </div>
+                        <div class="roadmap-content-heading">
+                            Hang a Honey Badger
+                        </div>
+                        <div class="roadmap-content-paragraph">
+                            <p style="text-align: justify;">
+                                Honey Badgers will be given the opportunity to avail a free printed 
+                                and framed version of their NFT through our strategic partnerships. 
+                                Proudly hang your avatar and introduce the world to your non-fungible piece of art.
+                            </p>
+                        </div>
+                    </div>
+    
+                </div>
+    
+                <div class="row">
+    
+                    <div class="col-lg-3 col-md-3" id="roadmap-id-05">
+                        <div style="
+                                font-family: Space mono;
+                                font-style: normal;
+                                font-weight: 600;
+                                font-size: 14px;
+                                line-height: 16px;
+                                color: #ffffff;
+                                letter-spacing: 1px;
+                                text-align: left;
+                            ">
+                            STAGE VIII
+                        </div>
+                        <div class="roadmap-content-heading">
+                            Unlocking Base 721
+                        </div>
+                        <div class="roadmap-content-paragraph">
+                            <p style="text-align: justify;">
+                                We chronicle the epic expedition of our Honey Badgers to Base 721 &
+                                 unveil the mysteries behind the cryptic messages from the lost world of above.
+                            </p>
+                        </div>
+    
+                    </div>
+
+            </div>
+            <div class="row">
+
+                <div class="col-lg-3 col-md-3" id="roadmap-id-05">
+                    <div style="
+                            font-family: Space mono;
+                            font-style: normal;
+                            font-weight: 600;
+                            font-size: 14px;
+                            line-height: 16px;
+                            color: #ffffff;
+                            letter-spacing: 1px;
+                            text-align: left;
+                        ">
+                        STAGE IX
+                    </div>
+                    <div class="roadmap-content-heading">
+                        3D-Interactable world
+                    </div>
+                    <div class="roadmap-content-paragraph">
+                        <p style="text-align: justify;">
+                            The SoliCity metaverse will keep expanding. Our city will 
+                            open various navigable locations such as the NFT art gallery, 
+                            mining farm, casino, and many more interesting spots. 
+                            Each location will have a real world application and utility for the citizens of SoliCity.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div id="roadmap-id-03" class="websitecontainer websitecentralised">
+            <div class="row" id="tube-content-01">
+                <div class="col-lg-4 col-md-4 col-sm-4" id="tube01">
+                    <img align="center" src="image/TubeUpdated.png" class="tube" alt="" srcset="">
+                </div>
+            </div>
+            <div class="" style="margin-top: -265%; ">
+
+                <div class="desktop-id-03" id="desktop-id-03">
+                    <!-- <div style="width: 100%; background-color: #000000; padding: 1%;"> -->
+                        <div style="
+                        font-family: 'Space mono';
+                        font-style: normal;
+                        font-weight: 600;
+                        font-size: 14px;
+                        line-height: 16px;
+                        color: #ffffff;
+                        letter-spacing: 1px;
+                        text-align: left;
+                    ">
+                    STAGE I
+                </div>
+                <div class="roadmap-content-heading">
+                    SOLICITY
+                </div>
+                <div class="roadmap-content-paragraph">
+                    <p style="text-align: justify;">
+                        The tunnels to SoliCity are open. Each Honeybadger has the
+                        privilege of accessing our crypto-only civilisation in the burrows
+                        via our private Discord Channel.
+                    </p>
+                </div>
+                    <!-- </div> -->
+                    
+                </div>
+
+            </div>
+            <div class="row">
+
+                <div class="desktop-id-03" id="desktop-id-02">
+                    <div style="
+                            font-family: Space mono;
+                            font-style: normal;
+                            font-weight: 600;
+                            font-size: 14px;
+                            line-height: 16px;
+                            color: #ffffff;
+                            letter-spacing: 1px;
+                            text-align: left;
+                        ">
+                        STAGE II
+                    </div>
+                    <div class="roadmap-content-heading">
+                        REWARDS PROGRAM
+                    </div>
+                    <div class="roadmap-content-paragraph">
+                        <p style="text-align: justify;">
+                            A set of NF Honey Badgers shall be reserved for meme competitions and various other community activities. 
+                            Let us storm the internet and make Honey Badgers the ultimate meme again!
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="row">
+
+                <div class="desktop-id-03" id="desktop-id-03">
+                    <div style="
+                            font-family: Space mono;
+                            font-style: normal;
+                            font-weight: 600;
+                            font-size: 14px;
+                            line-height: 16px;
+                            color: #ffffff;
+                            letter-spacing: 1px;
+                            text-align: left;
+                        ">
+                        STAGE III
+                    </div>
+                    <div class="roadmap-content-heading">
+                        LARVAE LOOT
+                    </div>
+                    <div class="roadmap-content-paragraph">
+                        <p style="text-align: justify;">
+                            Everyone's a winner! 50% of the royalties
+                             received from Opensea shall be distributed as rewards to the Honey Badgers. Guaranteed.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="row">
+
+                <div class="desktop-id-03" id="desktop-id-02">
+                    <div style="
+                            font-family: Space mono;
+                            font-style: normal;
+                            font-weight: 600;
+                            font-size: 14px;
+                            line-height: 16px;
+                            color: #ffffff;
+                            letter-spacing: 1px;
+                            text-align: left;
+                        " id="honeybadgerscare2">
+                        STAGE IV
+                    </div>
+                    <div class="roadmap-content-heading">
+                        HONEYPOT
+                    </div>
+                    <div class="roadmap-content-paragraph">
+                        <p style="text-align: justify;">
+                            Building something strong and sustainable requires resources. 
+                            30% of royalties goes back to the community treasury. This will be used to develop the project, 
+                            build strategic partnerships, to expand the community and extend the borders of Solicity.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row">
+
+                <div class="desktop-id-03" id="desktop-id-03">
+                    <div style="
+                            font-family: Space mono;
+                            font-style: normal;
+                            font-weight: 600;
+                            font-size: 14px;
+                            line-height: 16px;
+                            color: #ffffff;
+                            letter-spacing: 1px;
+                            text-align: left;
+                        " >
+                        STAGE V
+                    </div>
+                    <div class="roadmap-content-heading" >
+                        HONEY BADGERS DO CARE!
+                    </div>
+                    <div class="roadmap-content-paragraph">
+                        <p style="text-align: justify;">
+                            10% of the community treasury shall be donated to climate change and wildlife 
+                            conservation charities every month, as voted for by the Honey Badgers on Discord and Twitter.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row">
+
+                <div class="desktop-id-03" id="desktop-id-02">
+                    <div style="
+                            font-family: Space mono;
+                            font-style: normal;
+                            font-weight: 600;
+                            font-size: 14px;
+                            line-height: 16px;
+                            color: #ffffff;
+                            letter-spacing: 1px;
+                            text-align: left;
+                        ">
+                        STAGE VI
+                    </div>
+                    <div class="roadmap-content-heading">
+                        HONEY-BADGES
+                    </div>
+                    <div class="roadmap-content-paragraph">
+                        <p style="text-align: justify;">
+                            Each Honey Badgers will be proudly presented with a Badge NFT. 
+                            Bespoke, limited edition and handcrafted 3D badges that will stand as
+                             proof-of-tenacity of the Honey Badgers.
+
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+                <div class="row">
+
+                    <div class="desktop-id-03" id="desktop-id-03">
+                        <div style="
+                                font-family: Space mono;
+                                font-style: normal;
+                                font-weight: 600;
+                                font-size: 14px;
+                                line-height: 16px;
+                                color: #ffffff;
+                                letter-spacing: 1px;
+                                text-align: left;
+                            ">
+                            STAGE VII
+                        </div>
+                        <div class="roadmap-content-heading">
+                            HANG A HONEY BADGER
+                        </div>
+                        <div class="roadmap-content-paragraph">
+                            <p style="text-align: justify;">
+                                Honey Badgers will be given the opportunity to avail a free 
+                                printed and framed version of their NFT through our strategic partnerships.
+                                 Proudly hang your avatar and introduce the world to your non-fungible piece of art.
+                            </p>
+                        </div>
+                    </div>
+    
+                </div>
+    
+                <div class="row">
+    
+                    <div class="desktop-id-03" id="desktop-id-02">
+                        <div style="
+                                font-family: Space mono;
+                                font-style: normal;
+                                font-weight: 600;
+                                font-size: 14px;
+                                line-height: 16px;
+                                color: #ffffff;
+                                letter-spacing: 1px;
+                                text-align: left;
+                            ">
+                            STAGE VIII
+                        </div>
+                        <div class="roadmap-content-heading">
+                            UNLOCKING BASE 721
+                        </div>
+                        <div class="roadmap-content-paragraph">
+                            <p style="text-align: justify;">
+                                We chronicle the epic expedition of our 
+                                Honey Badgers to Base 721 & unveil the mysteries 
+                                behind the cryptic messages from the lost world of above.
+
+    
+                            </p>
+                        </div>
+    
+                    </div>
+
+            </div>
+            <div class="row">
+
+                <div class="desktop-id-03" id="desktop-id-03">
+                    <div style="
+                            font-family: Space mono;
+                            font-style: normal;
+                            font-weight: 600;
+                            font-size: 14px;
+                            line-height: 16px;
+                            color: #ffffff;
+                            letter-spacing: 1px;
+                            text-align: left;
+                        ">
+                        STAGE IX
+                    </div>
+                    <div class="roadmap-content-heading">
+                        3D-Interactable world
+
+                    </div>
+                    <div class="roadmap-content-paragraph">
+                        <p style="text-align: justify;">
+                            The SoliCity metaverse will keep expanding.
+                             Our city will open various navigable locations such as the NFT art gallery,
+                              mining farm, casino, and many more interesting spots. 
+                            Each location will have a real world application and utility for the citizens of SoliCity. 
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        <div id="roadmap-id-06">
+            <div class="row" id="tube-content-01">
+                <div class="col-lg-4 col-md-4 col-sm-4" id="tube01">
+                    <img align="center" src="image/TubeUpdated.png" class="tube" alt="" srcset="">
+                </div>
+            </div>
+            <div class="row" style="margin-top: -430%;">
+
+                <div class="tablet-id-01" id="tablet-id-01">
+                    <div style="
+                            font-family: Space mono;
+                            font-style: normal;
+                            font-weight: 600;
+                            font-size: 14px;
+                            line-height: 16px;
+                            color: #ffffff;
+                            letter-spacing: 1px;
+                            text-align: left;
+                            margin-top: -10%;
+                        ">
+                        STAGE I
+                    </div>
+                    <div class="roadmap-content-heading">
+                        SOLICITY
+                    </div>
+                    <div class="roadmap-content-paragraph">
+                        <p style="text-align: justify;">
+                            The tunnels to SoliCity are open. Each Honeybadger has the
+                            privilege of accessing our crypto-only civilisation in the burrows
+                            via our private Discord Channel.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="row" style="margin-top: -10%;" >
+
+                <div class="tablet-id-01" id="tablet-id-02">
+                    <div style="
+                            font-family: Space mono;
+                            font-style: normal;
+                            font-weight: 600;
+                            font-size: 14px;
+                            line-height: 16px;
+                            color: #ffffff;
+                            letter-spacing: 1px;
+                            text-align: left;
+                            margin-top: -10%;
+                        ">
+                        STAGE II
+                    </div>
+                    <div class="roadmap-content-heading">
+                        REWARDS PROGRAM
+                    </div>
+                    <div class="roadmap-content-paragraph">
+                        <p style="text-align: justify;">
+                            A set of NF Honey Badgers shall be reserved for meme competitions and various other community activities.
+                             Let us storm the internet and make Honey Badgers the ultimate meme again!
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="row" >
+
+                <div class="tablet-id-01" id="tablet-id-01">
+                    <div style="
+                            font-family: Space mono;
+                            font-style: normal;
+                            font-weight: 600;
+                            font-size: 14px;
+                            line-height: 16px;
+                            color: #ffffff;
+                            letter-spacing: 1px;
+                            text-align: left;
+                            margin-top: -10%;
+                        ">
+                        STAGE III
+                    </div>
+                    <div class="roadmap-content-heading">
+                        LARVAE LOOT
+                    </div>
+                    <div class="roadmap-content-paragraph">
+                        <p style="text-align: justify;">
+                            Everyone's a winner! 50% of the royalties received from Opensea shall be
+                             distributed as rewards to the Honey Badgers. Guaranteed.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="row" style="margin-top: -10%;">
+
+                <div class="tablet-id-01" id="tablet-id-02">
+                    <div style="
+                            font-family: Space mono;
+                            font-style: normal;
+                            font-weight: 600;
+                            font-size: 14px;
+                            line-height: 16px;
+                            color: #ffffff;
+                            text-align: left;
+                            letter-spacing: 1px;
+                            margin-top: -10%;
+                        " id="honeybadgerscare">
+                        STAGE IV
+                    </div>
+                    <div class="roadmap-content-heading">
+                        HONEYPOT
+                    </div>
+                    <div class="roadmap-content-paragraph">
+                        <p style="text-align: justify;">
+                            Building something strong and sustainable requires resources. 30% of royalties goes back to the community treasury. This will be used to develop the project, 
+                            build strategic partnerships, to expand the community and extend the borders of Solicity.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row" >
+
+                <div class="tablet-id-01" id="tablet-id-01">
+                    <div style="
+                            font-family: Space mono;
+                            font-style: normal;
+                            font-weight: 600;
+                            font-size: 14px;
+                            line-height: 16px;
+                            text-align: left;
+                            color: #ffffff;
+                            letter-spacing: 1px;
+                            margin-top: -10%;
+                        ">
+                        STAGE V
+                    </div>
+                    <div class="roadmap-content-heading" >
+                        HONEY BADGERS DO CARE!
+                    </div>
+                    <div class="roadmap-content-paragraph">
+                        <p style="text-align: justify;">
+                            10% of the community treasury shall be donated to climate change and wildlife conservation charities every month,
+                             as voted for by the Honey Badgers on Discord and Twitter.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row" style="margin-top: -10%;">
+
+                <div class="tablet-id-01" id="tablet-id-02">
+                    <div style="
+                            font-family: Space mono;
+                            font-style: normal;
+                            text-align: left;   
+                            font-weight: 600;
+                            font-size: 14px;
+                            line-height: 16px;
+                            color: #ffffff;
+                            letter-spacing: 1px;
+                            margin-top: -10%;
+                        ">
+                        STAGE VI
+                    </div>
+                    <div class="roadmap-content-heading">
+                        HONEY-BADGES
+                    </div>
+                    <div class="roadmap-content-paragraph">
+                        <p style="text-align: justify;">
+                            Each Honey Badgers will be proudly presented with a Badge NFT. Bespoke, limited edition and handcrafted 3D badges that will stand as proof-of-tenacity of the Honey Badgers.
+
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="row" >
+
+                <div class="tablet-id-01" id="tablet-id-01">
+                    <div style="
+                            font-family: Space mono;
+                            font-style: normal;
+                            font-weight: 600;
+                            font-size: 14px;
+                            line-height: 16px;
+                            margin-top: -10%;
+                            text-align: left;
+                            color: #ffffff;
+                            letter-spacing: 1px;
+                        ">
+                        STAGE VII
+                    </div>
+                    <div class="roadmap-content-heading">
+                        HANG A HONEY BADGER
+                    </div>
+                    <div class="roadmap-content-paragraph">
+                        <p style="text-align: justify;">
+                            Honey Badgers will be given the opportunity to avail a free printed and framed version of their NFT through our strategic partnerships.
+                             Proudly hang your avatar and introduce the world to your non-fungible piece of art.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row" style="margin-top: -10%;">
+
+                <div class="tablet-id-01" id="tablet-id-02">
+                    <div style="
+                            font-family: Space mono;
+                            font-style: normal;
+                            text-align: left;   
+                            font-weight: 600;
+                            font-size: 14px;
+                            line-height: 16px;
+                            color: #ffffff;
+                            letter-spacing: 1px;
+                            margin-top: -10%;
+                        ">
+                        STAGE VIII
+                    </div>
+                    <div class="roadmap-content-heading">
+                        UNLOCKING BASE 721 
+                    </div>
+                    <div class="roadmap-content-paragraph">
+                        <p style="text-align: justify;">
+                            We chronicle the epic expedition of our Honey Badgers to Base 721 
+                            & unveil the mysteries behind the cryptic messages from the lost world of above.
+
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="row">
+
+                <div class="tablet-id-01" id="tablet-id-01">
+                    <div style="
+                            font-family: Space mono;
+                            font-style: normal;
+                            font-weight: 600;
+                            font-size: 14px;
+                            line-height: 16px;
+                            text-align: left;
+                            color: #ffffff;
+                            letter-spacing: 1px;
+                            margin-top: -10%;
+                        ">
+                        STAGE IX
+                    </div>
+                    <div class="roadmap-content-heading">
+                        3D-Interactable world
+
+                    </div>
+                    <div class="roadmap-content-paragraph">
+                        <p style="text-align: justify;">
+                            The SoliCity metaverse will keep expanding. Our city will open various navigable locations such as the NFT art gallery, mining farm, casino, and many more interesting spots. 
+                            Each location will have a real world application and utility for the citizens of SoliCity. 
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <img src="image/image 30.png" alt="" class="roadmap-badger-02">
+        <div class="container" style="width: 100%; position: relative; height: 300px;margin-top:-4%; background-image: url(image/Rectangle108.png); z-index: 4;
+            background-size: cover;">
+        </div>
+        
+        <div style="position: relative; z-index: 10;">
+
+                
+
+            <img class="hive-image" src="image/badger-army-new1.png" alt="The Hive City" width="2500" height="1060">
+        </div>
+    </div>
+        <div class="mobile-opt-01 tablet-opt-1" style="background-color: black;position: relative; z-index: 6; height: 120px;">
+
+        </div>
+
+
+        
+        <div class="websitecontainer websitecentralised mobile-opt-01 tablet-opt-1" style="width: 70%; background-color: #000000;z-index: 3;position: relative; margin-left: auto; margin-right: auto;">
+            <div class="randall-section-2" >
+                NF HONEYBADGERS DON'T CARE, NOW SQUARED!
+            </div> 
+        </div>
+        <div class="websitecontainer websitecentralised">
+            <div class=" mobile-opt-01 gradient-member tablet-opt-1" style="width: 90%; background-color: #000000;z-index: 3;position: relative; margin-left: auto; margin-right: auto;">
+                <div class="randall-section " >
+                   
+                        <div class="row">
+                            <div class="randall-section-left col-lg-3">
+                                <b>NFHB IS THE ONLY OFFICIALLY LICENSED NFT COLLECTION BY CHRISTOPHER GORDON A.K.A ‘RANDALL’, CREATOR OF THE VIRAL VIDEO ‘HONEY BADGERS DON’T CARE’</b>
+                            </div>
+                            <div class="col-lg-6" style="margin-top: auto; padding: 20px;">
+    
+                                <iframe style="width: 85%; padding-top: 0px; padding-bottom: 10px; " height="250" src="https://www.youtube.com/embed/4r7wHMg5Yjg">
+                                </iframe>
+            
+                            </div>
+                            <div class="randall-section-right col-lg-3">
+                                    <img class="badger-image-story" alt="" src="image/honey-badger-your-video-removebg.png" style="top: 0px;">
+                         
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="randall-section-left col-lg-3">
+                                
+                                <img class="randall-image-story" alt="" src="image/53.png">
+    
+                            </div>
+                            <div class="col-lg-6" style="vertical-align: middle;  margin-bottom: 20px;">
+    
+                                <div style="margin-top: auto; margin-bottom: auto;">
+                                    <img src="image/emblem-onblack.png" alt="" style="width: 60px; padding-top: 20px;  padding-bottom: 40px;">
+                                    <span style="padding-left: 70px;"></span>
+                                    <img src="image/Badger Logo.png" alt="" style="width: 60px;padding-top: 20px;  padding-bottom: 40px;">
+                                </div>
+                                <div style="background-color: #1d1d1d; color: #FFBC45; width: 75%; margin-left: auto;
+                                margin-right: auto; border-radius: 20px; margin-bottom: 20px; margin-bottom: auto; font-family: 'Space mono';">
+                                    Here's Randall's message for you!
+                                    <audio id="audio_play">
+                                        <!-- <source src="http://www.w3schools.com/tags/horse.ogg" type="audio/ogg" /> -->
+                                        <source src="image/InShot_20220110_192703012.mp3" type="audio/mpeg" />
+                                    </audio>
+                                    
+                                    <img src="image/25569-6-play-button-transparent.png" style="width: 50px; padding: 7px;" onClick=playbutton() />
+                                </div>
+                            </div>
+                            <div class="randall-section-right col-lg-3">
+                                <b>ANNOUNCING INTEGRATION WITH 'HBDC' COIN, AN ERC-20 TOKEN WHICH WILL BE THE FIRST COIN TO POWER THE 'MINING FARMS' OF SOLICITY!</b>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+        <div class="desk-01" style="background-color: black;position: relative; z-index: 6; height: 120px;">
+
+        </div>
+
+        <div class="desk-01 " style="z-index: 100;position: relative; background-color: black;">
+            <div class = "rendall-section-mobile container" style="color: #FFBC45;font-family: 'Bios'; font-size: 40px; font-weight: bolder; width: 70%; background-color: #000000; padding-bottom: 60px; text-align: center; background-color: black;">
+                NF HONEYBADGERS DON'T CARE, NOW SQUARED!
+            </div>
+            <div class="container gradient-member" style="background-color: #2D2727; width:90% ; color: #FFFFFF;" >
+
+                <div class="row">
+                    <div class = "col-sm-12">
+                        <div style="text-align: center; padding-top: 20px;">
+                            <img src="image/emblem-onblack.png" style="width: 10%;">
+                            <img src="image/Badger Logo.png" style="width: 10%;">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class = "col-sm-12" style="padding:10px; padding-bottom: 30px; text-align:center; font-family: 'Space mono'; font-size: 14px; line-height: 20px; width: 90%; margin-left: auto; margin-right: auto;">
+                        <b>NFHB IS THE ONLY OFFICIALLY LICENSED NFT COLLECTION BY CHRISTOPHER GORDON A.K.A ‘RANDALL’, CREATOR OF THE VIRAL VIDEO ‘HONEY BADGERS DON’T CARE’ <br></b>
+                        <b>ANNOUNCING INTEGRATION WITH 'HBDC' COIN, AN ERC-20 TOKEN WHICH WILL BE THE FIRST COIN TO POWER THE 'MINING FARMS' OF SOLICITY!</b>
+    
+                    </div>
+                </div>
+                <div style="background-color: #1d1d1d; color: #FFBC45; width: 100%; margin-left: auto;
+                        margin-right: auto;font-family: 'Space mono'; border-radius: 20px; margin-bottom: auto; text-align: center; padding: 10px;">
+                        Here's Randall's message for you!
+                            <audio id="audio_play">
+                                <!-- <source src="http://www.w3schools.com/tags/horse.ogg" type="audio/ogg" /> -->
+                                <source src="image/InShot_20220110_192703012.mp3" type="audio/mpeg" />
+                            </audio>
+                                        
+                        <img src="image/25569-6-play-button-transparent.png" style="width: 50px; padding: 7px;" onClick=playbutton() />
+                </div>
+                
+                <div class="row" style="padding-top: 30px;">
+                    
+                        <img src="image/Randall1.png" alt="randall image"  style=" z-index: 8; width:40%;
+                        bottom: 0; padding-right: 0;" class="">
+                    
+                    
+                        <iframe class="" style="width: 60%; display: block;  padding-top:20px;padding-left: 0; padding-bottom :20px ; z-index: 10;" height="250" src="https://www.youtube.com/embed/4r7wHMg5Yjg">
+                        </iframe>
+                    
+                </div>
+                
+                
+
+            </div>
+        </div>
+        
+
+
+
+
+        <div class="mobile-opt-01" style="background-color: black;position: relative; z-index: 6; height: 120px;">
+
+        </div>
+        <img class="honeybadger-10"  id="badger-02" src="image/image31.png" alt="badger02">
+
+        <div class="mobile-opt-01 websitecontainer websitecentralised" style="background-color: #000000; position: relative; z-index: 7;" >
+            <div class="solicity-content" style="z-index: 10;">
+                <div class="solicity-content-heading" id="solidity-content-heading-01" style="text-align: center!important; color: #FFBC45; margin-bottom: 30px;">
+                    
+                    MEMBERSHIP PERKS
+                </div>
+                <!-- <p class="color-07" id="color-id-07" style="text-align: left!important; margin-bottom: 5%;">
+                    The NF Honey Badgers are undoubtedly distinctive.
+                    Here are some of the features that make us second to none.
+                </p > -->
+                
+            </div>
+            
+        
+            <div class="container10">
+                <div class="row">
+                    <!-- <div class="gradient-member col-lg-4 back-color column-lg-04 ownership-content " style="z-index: 2; margin-top: 30px
+                        ; " id="artists-id-01"> -->
+                    <div class="gradient-member col-lg-4 back-color column-lg-6 ownership-content " style="z-index: 2; margin-top: 30px;
+                        " id="artists-id-01">
+                        <div class="center-align-div" style="margin-top: 10px;">
+                            <img src="image/key-dynamic-premium.png" alt="">
+                        </div>
+                        <div class="ownership">
+                            OWNERSHIP
+                        </div>
+                        <p class="ownership-para">
+                            We pride ourselves on the uniqueness of our artwork and wish to share this with our community.
+                             You absolutely and unconditionally own all rights over the artwork of every Honey Badgers NFT
+                              that you own. Want to create a tshirt, coffee mug, a derivative work, a verified twitter PFP
+                               or just post it all over the internet? You are not only allowed but encouraged to do it!
+                         </p>
+                    </div>
+                    <div class="gradient-member col-lg-4 back-color column-lg-06 ownership-content" style="z-index: 2; margin-top: 30px;" id="artists-id-01">
+                        <!-- <div class="gradient-member col-lg-4 back-color column-lg-04 ownership-content " style="z-index: 2; margin-top: 30px;
+                            " id="artists-id-01"> -->
+                            <div class="center-align-div" style="margin-top: 10px;">
+                                <img src="image/sheild-dynamic-premium.png" alt="">
+                            </div>
+                            <div class="ownership">
+                                LISTING
+                            </div>
+                            <p class="ownership-para">
+                                NF Honeybadgers will verify on Opensea and list on Rarity Tools, making their presence felt
+                                on the world above.
+                            </p>
+                        </div>
+                    <!-- <div class="gradient-member col-lg-4 back-color column-lg-04 ownership-content " style="z-index: 2; margin-top: 30px;
+                        " id="artists-id-01"> -->
+                    <div class="gradient-member col-lg-4 back-color column-lg-6 ownership-content " style="z-index: 2; margin-top: 30px;
+                        " id="artists-id-01">
+                        <div class="center-align-div" style="margin-top: 10px;">
+                            <img src="image/paint-kit-dynamic-premium.png" alt="">
+                        </div>
+                        <div class="ownership">
+                            ORIGINAL ART
+                        </div>
+                        <p class="ownership-para">
+                            Each piece of art is created with 221 handcrafted elements that span 13 categories, including complex hand positions. Your piece of artwork is unique and has been meticulously created to ensure that it does not infringe on any form of trademark, copyright or brand identity.
+                        </p>
+                    </div>
+                    
+        
+                    <!-- <div class="gradient-member col-lg-4 back-color column-lg-04 ownership-content" style="z-index: 2;margin-top: 30px" id="artists-id-01"
+                        style="z-index: 2;"> -->
+                    <div class="gradient-member col-lg-4 back-color column-lg-04 ownership-content " style="z-index: 2; margin-top: 30px;
+                        " id="artists-id-01">
+                        <div class="center-align-div" style="margin-top: 10px;">
+                            <img src="image/locker-dynamic-premium.png" alt="">
+                        </div>
+                        <div class="ownership">
+                            SECURITY
+                        </div>
+                        <p class="ownership-para">
+                            
+                        Your NFT’s uniqueness is guaranteed and the sanctity, safety and security of your NFT’s original metadata and your unique high resolution image is our foremost responsibility.
+                        We have programmed our smart contract in the most robust way to ensure that we are prepared for all possible contingencies. We have the systems in place to ensure that the
+                        metadata of minted NFTs is revealed within an expedient timeframe post sale in a way that is secure, and and at the same time prevents the metadata of unminted NFTs from being 
+                        revealed to avoid malicious trait snipers.
+
+                        </p>
+                    </div>
+        
+                    <!-- <div class="gradient-member col-lg-4 back-color column-lg-6 ownership-content " style="z-index: 2;margin-top: 30px" id="artists-id-01"> -->
+                    <div class="gradient-member col-lg-4 back-color column-lg-04 ownership-content " style="z-index: 2; margin-top: 30px;
+                        " id="artists-id-01">
+                        <div class="center-align-div" style="margin-top: 10px;">
+                            <img src="image/chart-dynamic-premium.png" alt="">
+                        </div>
+                        <div class="ownership">
+                            FAIR PRICING
+                        </div>
+                        <p class="ownership-para">
+                            <!-- We believe in growing our collection’s floor price together as a community after our launch, not before - as well as to give the floor price plenty of room to grow! It is for this reason that our NFTs are modestly priced at only 0.05 ETH (+ gas) per NFT in our Public sale, and only 0.04 ETH (+ gas) per NFT in our limited pre-sale of only 500 NFTs reserved for only our most loyal and engaged community members - join our Discord NOW to get whitelisted before spots run out! -->
+                            We believe in growing our collection’s floor price together as a community after our launch, not before - as well as to give the floor price plenty of room to grow up into! It is for this reason that our NFTs are modestly priced at only 0.05 ETH (+ gas) per NFT in our Public sale, and only 0.04 ETH (+ gas) per NFT in our limited pre-sale of only 500 NFTs exclusively reserved for our most loyal and engaged community members (join the whitelist before spots run out!).
+                        </p>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        <div style="background-color: black;position: relative; z-index: 10; height: 90px;" id="gallery">
+        </div>
+        
+
+        <section style="position: relative; z-index: 7;">
+            <div style="background-color: black;">
+      
+            </div>
+
+            </div>
+        </section>
+        <div style="background-color: black;position: relative; z-index: 10; height: 0px;" >
+        </div>
+        <div class="rarity-01 container" 
+            style="position: relative; z-index: 10;background-color: #000000;">
+            <div class="heading-css rarity-margin-04 hive-text-starting-01" style="padding-bottom: 40px;
+            margin-bottom: 0%important;">
+                GALLERY
+            </div>
+            <div class="margin-06" style="background-color: black; height:20px;">
+            </div>
+        </div>
+        <div class="container-gallery" style="background-color: #000000; z-index: 11; position: relative;">
+            <div class="row" style="z-index: 12; background-color: #000000; margin-top: -6%;">
+                <div class="gallery-move">
+                    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner" style="">
+                            <div class="carousel-item active">
+                                <img src="image/1.gif" class="d-block w-100" alt="...">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-move" >
+                    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner" style="">
+                            <div class="carousel-item active">
+                                <img src="image/2.gif" class="d-block w-100" alt="...">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-move">
+                    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner" style="">
+                            <div class="carousel-item active">
+                                <img src="image/3.gif" class="d-block w-100" alt="...">
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-move">
+                    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner" style="">
+                            <div class="carousel-item active">
+                                <img src="image/4.gif" class="d-block w-100" alt="...">
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>   
+            </div>
+        </div>
+        <div style="background-color: black;position: relative; z-index: 6; height: 120px;">
+
+        </div>
+        <img class="hive-image" src="image/gif-break-3.png" alt="The Hive City" width="2500">
+        <div style="z-index: 10; position: relative; background-color: #000000; padding-top:120px;">
+            <div class="rarity-01 container" id="team" >
+                <div class="heading-css rarity-margin-04 hive-text-starting-01" style="margin-bottom: 60px;">
+                    THE TEAM
+                </div>
+                <!-- <P class="rarity-color-05">
+                    The NF Honey Badgers are undoubtedly distinctive.
+                    Here are some of the features that make us second to none.
+                </P> -->
+            </div>
+            <div class="websitecontainer websitecentralised">
+                <img class="hive-image" id="team-image-01" src="image/team-avatars.png" alt="The Hive City" width="2500"
+                    style="padding-bottom: 5%;">
+            </div>
+            <!-- <img class="hive-image" id="team-image-02" src="image/Teamup.png" alt="The Hive City" width="2500" height="1060"
+                style="margin-bottom: 5%;">
+            <img class="hive-image" id="team-image-03" src="image/Teamdown.png" alt="The Hive City" width="2500" height="1060"
+                style="margin-bottom: 5%;"> -->
+                
+                    
+                
+            
+        </div>
+    </section>
+    <div class="mobile-opt-01" style="width: 100%; background-color: #000000; height: 120px;" class="discordhide">
+
+    </div>
+    
+
+    <!-- <div class="mobile-opt-01">
+        <div class="row" style="background-color: #000000; z-index: 2;">
+            <div class="column-sm-1">
+
+            </div>
+            <div class="column-sm-4 hide-content-02">
+                <img src="image/BadgerTacticle(2)1.png" class="discord-city" alt="#" srcset=""
+                    style="margin-bottom:3%">
+                <img src="image/BadgerTacticle(3)1.png" class="discord-city" alt="#" srcset=""
+                    style="margin-bottom:3%">
+                <img src="image/BadgerTacticle(1)2.png" class="discord-city" alt="#" srcset=""
+                    style="margin-bottom:3%">
+            </div>
+            <div class="column-sm-1">
+
+            </div>
+            <div class="column-sm-7 join-discord-sectoin">
+                
+                <div class="heading-roadmap" id="textajustJoin" style="margin-top: 25%; color: #FFBC45;">
+                    <h2>Join Our Discord Community</h2>
+                </div>
+                <div class="roadmap-css" id="textajustJoin"  >
+                    <p>Welcome to SoliCity- your fiat is no good here! Visit our weekly NFT art symposium for a
+                        critique on rarity or stop by the snakepit and have yourself a good old iced snake. With over 3
+                        million rigs running, it sure gets hot in here.
+                    </p>
+                </div>
+                <div class="discord-css" id="textajustJoin">
+                    <a href="#" style="color:#7879F1;font-size: 20px; text-decoration: none;">
+                        JOIN DISCORD <img src="image/arrow-up-right.png" alt=""></a>
+                </div>
+            </div>
+            <div class="column-sm-1">
+
+            </div>
+            <img src="image/BadgerTacticle(1)2.png" alt="#" srcset="" style="margin-bottom:3%" id="underworld-id">
+        </div>
+    </div> -->
+
+
+    <div class="discordSection mobile-opt-01 websitecontainer websitecentralised" style="background-color: #000000;">
+        
+        <div style="text-align: center; width: 62%; height: 400px; margin-left: auto; margin-right: auto; background-image: url('image/Discord2.png'); background-size: 100% 100%; background-repeat: no-repeat; background-position: center;">
+            <div style="color: #FFBC45; font-family: 'Space mono';  font-size: 14px; font-weight: 700;letter-spacing: 1px; line-height: 16px; padding: 2%; padding-top: 8%;">
+                SOLICITY COMMUNITY
+            </div>
+            <div class="joindiscord" style="color: #ffffff; font-family: 'Bios'; font-size: 32px; font-weight: bold; letter-spacing: 1px;line-height: 34px;">
+                JOIN OUR DISCORD COMMUNITY
+            </div>
+            <div class="joindiscord-02" style="color: rgba(255, 255, 255, 0.77);width: 83%;margin-left: auto; margin-right:auto; font-family: 'Space mono'; font-size: 18px; line-height: 24px; letter-spacing: -0.5px; text-align: center;padding: 2%;">
+                Welcome to SoliCity - your fiat is no good here! Visit our weekly NFT art 
+                symposium for a critique on rarity or stop by the snakepit and have yourself a 
+                good old iced snake. With over 3 million rigs running, it sure gets hot in here.
+
+            </div>
+            <div style="padding-top: 3%;" >
+                <a href="https://discord.gg/SU7uf7RPn4" target="_blank" style="text-decoration: none;" class="joinus">
+                <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_1474_767)">
+                    <g filter="url(#filter0_d_1474_767)">
+                    <path fill="#FFFFFF" d="M15.32 4.76001C15.1214 5.1157 14.9444 5.48303 14.79 5.86001C13.2727 5.62006 11.7272 5.62006 10.21 5.86001C10.0556 5.48303 9.87858 5.1157 9.67998 4.76001C8.25077 5.00421 6.86138 5.44155 5.54998 6.06001C3.20492 9.4443 2.14142 13.553 2.54998 17.65C4.07822 18.7989 5.79344 19.6751 7.61998 20.24C8.03589 19.6906 8.40708 19.1087 8.72998 18.5C8.13405 18.2803 7.56127 18.0023 7.01998 17.67C7.16844 17.5712 7.30888 17.4609 7.43998 17.34C9.01844 18.1003 10.7479 18.4952 12.5 18.4952C14.252 18.4952 15.9815 18.1003 17.56 17.34C17.7 17.46 17.84 17.57 17.98 17.67C17.4357 17.9997 16.8635 18.2807 16.27 18.51C16.5795 19.1325 16.9408 19.728 17.35 20.29C19.1742 19.727 20.8865 18.8506 22.41 17.7C22.8284 13.6022 21.764 9.49019 19.41 6.11001C18.1133 5.47875 16.7377 5.02468 15.32 4.76001ZM9.17998 15.31C8.67956 15.2741 8.21252 15.0457 7.8769 14.6728C7.54128 14.2999 7.36317 13.8114 7.37998 13.31C7.36064 12.8079 7.53786 12.3181 7.87399 11.9446C8.21012 11.5711 8.67864 11.3435 9.17998 11.31C9.68132 11.3435 10.1498 11.5711 10.486 11.9446C10.8221 12.3181 10.9993 12.8079 10.98 13.31C10.9993 13.8121 10.8221 14.3019 10.486 14.6754C10.1498 15.0489 9.68132 15.2765 9.17998 15.31ZM15.82 15.31C15.3196 15.2741 14.8525 15.0457 14.5169 14.6728C14.1813 14.2999 14.0032 13.8114 14.02 13.31C14.0006 12.8079 14.1779 12.3181 14.514 11.9446C14.8501 11.5711 15.3186 11.3435 15.82 11.31C16.3222 11.341 16.7923 11.5679 17.1289 11.942C17.4656 12.316 17.6419 12.8073 17.62 13.31C17.6419 13.8128 17.4656 14.304 17.1289 14.6781C16.7923 15.0521 16.3222 15.279 15.82 15.31Z" fill="#7879F1"/>
+                    </g>
+                    </g>
+                    <defs>
+                    <filter id="filter0_d_1474_767" x="-0.535583" y="1.76001" width="26.0347" height="21.53" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                    <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                    <feOffset/>
+                    <feGaussianBlur stdDeviation="1.5"/>
+                    <feComposite in2="hardAlpha" operator="out"/>
+                    <feColorMatrix type="matrix" values="0 0 0 0 0.433333 0 0 0 0 0.438017 0 0 0 0 1 0 0 0 1 0"/>
+                    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1474_767"/>
+                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1474_767" result="shape"/>
+                    </filter>
+                    <clipPath id="clip0_1474_767">
+                    <rect width="24" height="24" fill="white" transform="translate(0.5 0.5)"/>
+                    </clipPath>
+                    </defs>
+                    </svg>
+                    <span style="font-family: Bios;
+                    font-style: normal;
+                    font-weight: bold;
+                    
+                    font-size: 16px;
+                    line-height: 24px;                    
+                    color: #FFFFFF; margin-left: 1%;">JOIN US</span> </a>                  
+            </div>
+        </div>
+    </div>
+    <div class="mobile-opt-01" style="width: 100%; background-color: #000000; height: 120px;" id="faq">
+    </div>
+    <div class="mobile-opt-01" style="width: 90%; margin-left: auto; margin-right: auto; background-color: #000000;">
+
+        <div class="heading-faq" >
+            FAQs
+            <img class="honeybadger-11" align="right" id="badger-03" src="image/image29.png" alt="badger03">
+        </div>
+        <div class="row faqclass" style="z-index: 2; padding-right: 0%!important; padding-left: 0%!important;
+            margin-left: 0!important;">
+            <div class="content-faq websitecontainer websitecentralised" style="z-index: 2;">
+                <div class="faqexpand" style="z-index: 2;">
+                    <div onclick="showhide3()" class="headingfaq" id="faq-query">
+                        <div class="faqex" id="faqex3">+</div> What is an NFT?
+                        <!-- <div class="faqex">+</div> -->
+                    </div>
+                    <div id="disp_tog3" class="disp_tog">
+                        <div class="margin-12"></div>
+                        <p class="paragraphfaq">
+                            NFTs stand for "Non-fungible tokens", but this probably sounds more
+                            confusing than clarifying. Simply explained, an NFT can be thought of as a
+                            unique digital asset with blockchain-based ownership that users can buy, own,
+                            and trade. While the leading use cases of NFTs have been seen in the
+                            ‘tokenization’ of digital art, this is only but a glimpse into the disruptive
+                            potential of NFTs in the digital era of human civilisation. NFTs can be
+                            engineered through smart-contracts to the limitations only of our imagination
+                            (and programming skills) - think exclusive access to websites, event tickets,
+                            game items, ownership records for physical objects, intellectual property…
+                            This list can go on. <br><br>
+                            To sum things up, not only does your NFT serve as a ‘certificate of
+                            authenticity’, it also acts as your ‘members-only’ access card to the most
+                            exclusive of clubs. The NF Honey Badgers club is as exclusive as it gets.
+
+                        </p>
+                    </div>
+                </div>
+                <div class="margin-13"></div>
+                <div class="faqexpand">
+                    <div onclick="showhide4()" class="headingfaq" id="faq-query">
+                        <div class="faqex"id="faqex4">+</div> What is a Metamask wallet and how to use it?
+                        <!-- <div class="faqex">+</div> -->
+                    </div>
+                    <div id="disp_tog4" class="disp_tog">
+                        <div class="margin-12"></div>
+                        <p class="paragraphfaq">
+                            Metamask is a crypto-wallet (available both as a web browser
+                            plugin/extension as well as a mobile app) that can store your Ethereum and all
+                            Ethereum based tokens (including NFTs). You will need to create a Metamask
+                            account if you do not already have one, as this will be needed to purchase and
+                            mint an NF Honey Badger. Once you have an account, you shall be able to
+                            view your unique Ethereum address - this is where your NFT will be stored
+                            upon minting. If you are making a new Metamask account, remember to
+                            securely note down your ‘SecretRecoveryPhrase’. Learn more about
+                            Metamask and how easy it is to use over here!<span>(<a href="https://metamask.io" target="_blank">https://metamask.io</a>)</span>
+                            <!-- <span><a href="https://metamask.io."> https://metamask.io.</a></span> -->
+                        </p>
+                    </div>
+                </div>
+                <div class="margin-13"></div>
+                <div class="faqexpand">
+                    <div onclick="showhide5()" class="headingfaq" id="faq-query">
+                        <div class="faqex" id="faqex5">+</div> New to crypto?
+                        <!-- <div class="faqex">+</div> -->
+                    </div>
+                    <div id="disp_tog5" class="disp_tog">
+                        <div class="margin-12"></div>
+                        <p class="paragraphfaq">
+                            Once you have your Metamask wallet set up either as a browser extension
+                            (currently supports Chrome, Firefox, Brave and Edge) or through its app on
+                            your phone (Android/iOS), you will need to top it up with some Ethereum in
+                            order to mint an NF Honey Badger. If you need to first purchase some
+                            Ethereum in order to transfer it to your Metamask wallet, you can use any
+                            reputable cryptocurrency exchange platform whose services are available in
+                            your jurisdiction. A few popular examples of such exchanges are Coinbase,
+                            Binance, Kraken, KuCoin, FTX etc. Make sure that you transfer some surplus
+                            Ethereum into your Metamask wallet over and above the amount you require
+                            for minting (0.05 ETH per NFT), as you will be charged some ‘gas fees’ by
+                            the Ethereum network for minting your NFT(s). The exact gas fees that may
+                            be levied would depend on the network congestion at the time, but have a little
+                            extra Ethereum in there just to be on the safe side so that you secure your
+                            minting.
+
+                        </p>
+                    </div>
+                </div>
+                <div class="margin-13"></div>
+                <div class="faqexpand">
+                    <div onclick="showhide6()" class="headingfaq" id="faq-query">
+                        <div class="faqex"id="faqex6">+</div> How do I mint an NF Honeybadger NFT on my laptop/computer?
+
+                        <!-- <div class="faqex">+</div> -->
+                    </div>
+                    <div id="disp_tog6" class="disp_tog">
+                        <div class="margin-12"></div>
+                        <p class="paragraphfaq">
+                            If you are using a desktop or a laptop to mint our NF Honey Badgers, all you
+                            need to do is connect your web browser’s Metamask plugin/extension with our
+                            website by clicking on the ‘connect to metamask’ button on the top right hand
+                            side. Once our sale is open, you shall be able to easily select how many Honey
+                            Badgers you desire to mint and simply click on the ‘Mint’ button which shall
+                            be made readily visible on the website. If you have enough ETH to complete
+                            your desired transaction, your minting transaction should go through in no
+                            time and your brand new NF Honey Badger NFT shall be sent to your
+                            Metamask wallet address associated with your account. You will be able to see
+                            your NFT, visually, on Opensea once you connect your Metamask account to
+                            it
+                        </p>
+                    </div>
+                </div>
+                <div class="margin-13"></div>
+                <div class="faqexpand">
+                    <div onclick="showhide8()" class="headingfaq" id="faq-query">
+                        <div class="faqex" id="faqex8">+</div> What if I am using a phone?
+                        <!-- <div class="faqex">+</div> -->
+                    </div>
+                    <div id="disp_tog8" class="disp_tog">
+                        <div class="margin-12"></div>
+                        <p class="paragraphfaq">
+                            You can mint an NF Honeybadger by downloading Metamask’s Android/iOS
+                            application and accessing the website through its built-in browser. After
+                            installation, launch the Metamask app and login/sign up. Click on the menu
+                            bar (the 3 lines on the top left of your screen) and select "Browser". When you
+                            access www.nfhoneybadgers.com via this browser, you can click on the
+                            ‘Connect to Metamask’ button in order to connect your wallet and to start
+                            minting!
+
+                        </p>
+                    </div>
+                </div>
+                <div class="margin-13"></div>
+                <div class="faqexpand">
+                    <div onclick="showhide9()" class="headingfaq" id="faq-query">
+                        <div class="faqex" id="faqex9">+</div> Do NF Honeybadgers care?
+
+                        <!-- <div class="faqex">+</div> -->
+                    </div>
+                    <div id="disp_tog9" class="disp_tog">
+                        <div class="margin-12"></div>
+                        <p class="paragraphfaq">
+                            <span style="color: #FFFFFF;"><a id="jumpto" href="#honeybadgerscare1"> No! Except sometimes.</a></span>
+                            
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="mobile-opt-01" style="width: 100%; background-color: #000000; height: 100px;">
+    </div>
+    <div class="solicity-content-02 mobile-opt-01" style="background-color: #000000;">
+        <div class="solicity-content-heading-02">
+            verified smart contract
+        </div>
+        <a href="https://etherscan.io/address/0x19ebd2c19f0499cba9d163258ff6b19ed38bb9bb" style="text-decoration: none;" target="_blank"><p class="color-08">0x19Ebd2C19f0499Cba9d163258FF6b19ED38bB9bb
+        </p></a>
+    </div>
+    <div class="mobile-opt-01" style="width: 100%; background-color: #000000; height: 100px;">
+    </div>
+
+<div style="text-align: left; top: 10%;" class="mobile-opt-01">
+    <img src="image/nfhb-onblack1.png" class="logo-bottom" alt="logo-dark">
+
+</div>
+<div class="mobile-opt-01" style="background-color: #000000; width: 100%; text-align: center; padding-bottom: 2%;">
+    <a class="margin-footer-symbols footer" style="color: #FFFFFF;" target="_blank" href="https://discord.gg/SU7uf7RPn4"><span
+        class="footer-span"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M14.8199 4.25977C14.6213 4.61545 14.4443 4.98279 14.2899 5.35977C12.7727 5.11982 11.2272 5.11982 9.70992 5.35977C9.55551 4.98279 9.37852 4.61545 9.17992 4.25977C7.75071 4.50397 6.36132 4.9413 5.04992 5.55977C2.70486 8.94405 1.64135 13.0527 2.04992 17.1498C3.57815 18.2986 5.29337 19.1748 7.11992 19.7398C7.53583 19.1904 7.90702 18.6085 8.22992 17.9998C7.63399 17.78 7.06121 17.502 6.51992 17.1698C6.66838 17.071 6.80881 16.9606 6.93992 16.8398C8.51838 17.6001 10.2479 17.9949 11.9999 17.9949C13.7519 17.9949 15.4815 17.6001 17.0599 16.8398C17.1999 16.9598 17.3399 17.0698 17.4799 17.1698C16.9357 17.4994 16.3635 17.7805 15.7699 18.0098C16.0794 18.6323 16.4407 19.2277 16.8499 19.7898C18.6742 19.2268 20.3864 18.3504 21.9099 17.1998C22.3283 13.102 21.2639 8.98995 18.9099 5.60977C17.6132 4.9785 16.2376 4.52444 14.8199 4.25977ZM8.67992 14.8098C8.1795 14.7738 7.71246 14.5455 7.37684 14.1725C7.04121 13.7996 6.86311 13.3112 6.87992 12.8098C6.86058 12.3077 7.0378 11.8178 7.37393 11.4444C7.71005 11.0709 8.17858 10.8432 8.67992 10.8098C9.18126 10.8432 9.64978 11.0709 9.9859 11.4444C10.322 11.8178 10.4993 12.3077 10.4799 12.8098C10.4993 13.3119 10.322 13.8017 9.9859 14.1752C9.64978 14.5486 9.18126 14.7763 8.67992 14.8098ZM15.3199 14.8098C14.8195 14.7738 14.3525 14.5455 14.0168 14.1725C13.6812 13.7996 13.5031 13.3112 13.5199 12.8098C13.5006 12.3077 13.6778 11.8178 14.0139 11.4444C14.3501 11.0709 14.8186 10.8432 15.3199 10.8098C15.8222 10.8407 16.2922 11.0677 16.6289 11.4417C16.9655 11.8158 17.1418 12.307 17.1199 12.8098C17.1418 13.3125 16.9655 13.8038 16.6289 14.1778C16.2922 14.5519 15.8222 14.7788 15.3199 14.8098Z" fill="#C4C4C4"/>
+    </svg></a>
+
+    <a class="margin-footer-symbols footer" style="color: #FFFFFF;" target="_blank" href="https://twitter.com/NFHoneyBadgers"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M19.633 7.99704C19.646 8.17204 19.646 8.34604 19.646 8.52004C19.646 13.845 15.593 19.981 8.186 19.981C5.904 19.981 3.784 19.32 2 18.172C2.324 18.209 2.636 18.222 2.973 18.222C4.78599 18.2264 6.54765 17.6202 7.974 16.501C7.13342 16.4858 6.31858 16.2085 5.64324 15.7078C4.9679 15.2071 4.46578 14.5079 4.207 13.708C4.456 13.745 4.706 13.77 4.968 13.77C5.329 13.77 5.692 13.72 6.029 13.633C5.11676 13.4489 4.29647 12.9544 3.70762 12.2337C3.11876 11.5131 2.79769 10.6107 2.799 9.68004V9.63004C3.336 9.92904 3.959 10.116 4.619 10.141C4.06609 9.77363 3.61272 9.27507 3.29934 8.68983C2.98596 8.1046 2.82231 7.4509 2.823 6.78704C2.823 6.03904 3.022 5.35304 3.371 4.75504C4.38314 6.00006 5.6455 7.0186 7.07634 7.7447C8.50717 8.4708 10.0746 8.88826 11.677 8.97004C11.615 8.67004 11.577 8.35904 11.577 8.04704C11.5767 7.518 11.6807 6.9941 11.8831 6.50528C12.0854 6.01646 12.3821 5.57232 12.7562 5.19823C13.1303 4.82414 13.5744 4.52745 14.0632 4.32512C14.5521 4.12279 15.076 4.01878 15.605 4.01904C16.765 4.01904 17.812 4.50504 18.548 5.29104C19.4498 5.11666 20.3145 4.78747 21.104 4.31804C20.8034 5.24886 20.1738 6.03815 19.333 6.53804C20.1328 6.44682 20.9144 6.2365 21.652 5.91404C21.1011 6.71714 20.4185 7.42139 19.633 7.99704Z" fill="#C4C4C4"/>
+        </svg></a>
+
+    <a class="margin-footer-symbols footer" style="color: #FFFFFF;" target="_blank" href="https://www.instagram.com/nfhoneybadgers/"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M20.9471 8.30496C20.937 7.54758 20.7952 6.79773 20.5281 6.08896C20.2964 5.49111 19.9426 4.94816 19.4892 4.49479C19.0359 4.04142 18.4929 3.68761 17.8951 3.45596C17.1954 3.19331 16.4562 3.0513 15.7091 3.03596C14.7471 2.99296 14.4421 2.98096 12.0001 2.98096C9.55807 2.98096 9.24507 2.98096 8.29007 3.03596C7.54323 3.05141 6.80442 3.19343 6.10507 3.45596C5.50713 3.68745 4.96409 4.0412 4.5107 4.49459C4.05732 4.94798 3.70356 5.49102 3.47207 6.08896C3.2089 6.78809 3.06719 7.52707 3.05307 8.27396C3.01007 9.23696 2.99707 9.54196 2.99707 11.984C2.99707 14.426 2.99707 14.738 3.05307 15.694C3.06807 16.442 3.20907 17.18 3.47207 17.881C3.70395 18.4787 4.05797 19.0215 4.51151 19.4747C4.96505 19.9279 5.50813 20.2815 6.10607 20.513C6.8035 20.7862 7.54244 20.9383 8.29107 20.963C9.25407 21.006 9.55907 21.019 12.0011 21.019C14.4431 21.019 14.7561 21.019 15.7111 20.963C16.4582 20.9482 17.1974 20.8066 17.8971 20.544C18.4948 20.312 19.0376 19.9581 19.4909 19.5048C19.9442 19.0515 20.2982 18.5086 20.5301 17.911C20.7931 17.211 20.9341 16.473 20.9491 15.724C20.9921 14.762 21.0051 14.457 21.0051 12.014C21.0031 9.57196 21.0031 9.26196 20.9471 8.30496ZM11.9941 16.602C9.44007 16.602 7.37107 14.533 7.37107 11.979C7.37107 9.42496 9.44007 7.35596 11.9941 7.35596C13.2202 7.35596 14.396 7.84302 15.263 8.71C16.13 9.57698 16.6171 10.7529 16.6171 11.979C16.6171 13.2051 16.13 14.3809 15.263 15.2479C14.396 16.1149 13.2202 16.602 11.9941 16.602ZM16.8011 8.26296C16.6595 8.26309 16.5192 8.2353 16.3884 8.18117C16.2575 8.12704 16.1386 8.04764 16.0385 7.94751C15.9384 7.84738 15.859 7.72849 15.8049 7.59765C15.7507 7.4668 15.7229 7.32656 15.7231 7.18496C15.7231 7.04346 15.7509 6.90334 15.8051 6.77262C15.8592 6.64189 15.9386 6.5231 16.0387 6.42305C16.1387 6.32299 16.2575 6.24363 16.3882 6.18948C16.519 6.13533 16.6591 6.10746 16.8006 6.10746C16.9421 6.10746 17.0822 6.13533 17.2129 6.18948C17.3436 6.24363 17.4624 6.32299 17.5625 6.42305C17.6625 6.5231 17.7419 6.64189 17.7961 6.77262C17.8502 6.90334 17.8781 7.04346 17.8781 7.18496C17.8781 7.78096 17.3961 8.26296 16.8011 8.26296Z" fill="#C4C4C4"/>
+        <path d="M11.9942 14.9821C13.6527 14.9821 14.9972 13.6376 14.9972 11.9791C14.9972 10.3206 13.6527 8.97607 11.9942 8.97607C10.3357 8.97607 8.99121 10.3206 8.99121 11.9791C8.99121 13.6376 10.3357 14.9821 11.9942 14.9821Z" fill="#C4C4C4"/>
+        </svg>
+    </a>
+    
+    <a class="margin-footer-symbols footer" style="color: #FFFFFF;" target="_blank" href="https://opensea.io/collection/nfhoneybadgers"><svg width="30" height="30" viewBox="0 0 90 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M45 0C20.151 0 0 20.151 0 45C0 69.849 20.151 90 45 90C69.849 90 90 69.849 90 45C90 20.151 69.858 0 45 0ZM22.203 46.512L22.392 46.206L34.101 27.891C34.272 27.63 34.677 27.657 34.803 27.945C36.756 32.328 38.448 37.782 37.656 41.175C37.323 42.57 36.396 44.46 35.352 46.206C35.217 46.458 35.073 46.71 34.911 46.953C34.839 47.061 34.713 47.124 34.578 47.124H22.545C22.221 47.124 22.032 46.773 22.203 46.512ZM74.376 52.812C74.376 52.983 74.277 53.127 74.133 53.19C73.224 53.577 70.119 55.008 68.832 56.799C65.538 61.38 63.027 67.932 57.402 67.932H33.948C25.632 67.932 18.9 61.173 18.9 52.83V52.56C18.9 52.344 19.08 52.164 19.305 52.164H32.373C32.634 52.164 32.823 52.398 32.805 52.659C32.706 53.505 32.868 54.378 33.273 55.17C34.047 56.745 35.658 57.726 37.395 57.726H43.866V52.677H37.467C37.143 52.677 36.945 52.299 37.134 52.029C37.206 51.921 37.278 51.813 37.368 51.687C37.971 50.823 38.835 49.491 39.699 47.97C40.284 46.944 40.851 45.846 41.31 44.748C41.4 44.55 41.472 44.343 41.553 44.145C41.679 43.794 41.805 43.461 41.895 43.137C41.985 42.858 42.066 42.57 42.138 42.3C42.354 41.364 42.444 40.374 42.444 39.348C42.444 38.943 42.426 38.52 42.39 38.124C42.372 37.683 42.318 37.242 42.264 36.801C42.228 36.414 42.156 36.027 42.084 35.631C41.985 35.046 41.859 34.461 41.715 33.876L41.661 33.651C41.553 33.246 41.454 32.868 41.328 32.463C40.959 31.203 40.545 29.97 40.095 28.818C39.933 28.359 39.753 27.918 39.564 27.486C39.294 26.82 39.015 26.217 38.763 25.65C38.628 25.389 38.52 25.155 38.412 24.912C38.286 24.642 38.16 24.372 38.025 24.111C37.935 23.913 37.827 23.724 37.755 23.544L36.963 22.086C36.855 21.888 37.035 21.645 37.251 21.708L42.201 23.049H42.219C42.228 23.049 42.228 23.049 42.237 23.049L42.885 23.238L43.605 23.436L43.866 23.508V20.574C43.866 19.152 45 18 46.413 18C47.115 18 47.754 18.288 48.204 18.756C48.663 19.224 48.951 19.863 48.951 20.574V24.939L49.482 25.083C49.518 25.101 49.563 25.119 49.599 25.146C49.725 25.236 49.914 25.38 50.148 25.56C50.337 25.704 50.535 25.884 50.769 26.073C51.246 26.46 51.822 26.955 52.443 27.522C52.605 27.666 52.767 27.81 52.92 27.963C53.721 28.71 54.621 29.583 55.485 30.555C55.728 30.834 55.962 31.104 56.205 31.401C56.439 31.698 56.7 31.986 56.916 32.274C57.213 32.661 57.519 33.066 57.798 33.489C57.924 33.687 58.077 33.894 58.194 34.092C58.554 34.623 58.86 35.172 59.157 35.721C59.283 35.973 59.409 36.252 59.517 36.522C59.85 37.26 60.111 38.007 60.273 38.763C60.327 38.925 60.363 39.096 60.381 39.258V39.294C60.435 39.51 60.453 39.744 60.471 39.987C60.543 40.752 60.507 41.526 60.345 42.3C60.273 42.624 60.183 42.93 60.075 43.263C59.958 43.578 59.85 43.902 59.706 44.217C59.427 44.856 59.103 45.504 58.716 46.098C58.59 46.323 58.437 46.557 58.293 46.782C58.131 47.016 57.96 47.241 57.816 47.457C57.609 47.736 57.393 48.024 57.168 48.285C56.97 48.555 56.772 48.825 56.547 49.068C56.241 49.437 55.944 49.779 55.629 50.112C55.449 50.328 55.251 50.553 55.044 50.751C54.846 50.976 54.639 51.174 54.459 51.354C54.144 51.669 53.892 51.903 53.676 52.11L53.163 52.569C53.091 52.641 52.992 52.677 52.893 52.677H48.951V57.726H53.91C55.017 57.726 56.07 57.339 56.925 56.61C57.213 56.358 58.482 55.26 59.985 53.604C60.039 53.541 60.102 53.505 60.174 53.487L73.863 49.527C74.124 49.455 74.376 49.644 74.376 49.914V52.812V52.812Z"  fill="#C4C4C4"/>
+        </svg>
+    </a>
+    <a class="margin-footer-symbols footer" style="color: #FFFFFF;" target="_blank" href="https://youtube.com/channel/UCyN2SzYbghlgzHfDsitclLA">
+        <svg xmlns="http://www.w3.org/2000/svg" height="40" width="60" viewBox="-35.20005 -41.33325 305.0671 247.9995">
+        <path d="M93.333 117.559V47.775l61.334 34.893zm136.43-91.742c-2.699-10.162-10.651-18.165-20.747-20.881C190.716 0 117.333 0 117.333 0S43.951 0 25.651 4.936C15.555 7.652 7.603 15.655 4.904 25.817 0 44.236 0 82.667 0 82.667s0 38.429 4.904 56.849c2.699 10.163 10.65 18.165 20.747 20.883 18.3 4.934 91.682 4.934 91.682 4.934s73.383 0 91.683-4.934c10.096-2.718 18.048-10.72 20.747-20.883 4.904-18.42 4.904-56.85 4.904-56.85s0-38.43-4.904-56.849" fill="#C4C4C4"/></svg>
+    </a>
+    
+</div>
+<div class="container-footer mobile-opt-01" style="background-color: #171717;">
+    <footer class="text-center text-white"
+        style="z-index: 1;font-family: 'Space Mono' ">
+        <div style="background-color: #171717;width: 100%; z-index: 2;">
+            <div class="container pt-4">
+
+                <section class="mb-4">
+
+                    <!-- <img src="image/logo-text1.png" class="footer-logo" alt="logo-dark"> -->
+
+
+                    <a class="footer footer-span" style="text-decoration: none; "  href = "policy.html" target="_blank">
+                        Privacy Policy</a>
+
+                    <a class="margin-footer footer footer-span" style="text-decoration: none; " href="terms.html" target="_blank">
+                        Terms</a>
+
+                   
+                    <div class="text-right" style="color: #FFFFFF; padding: 1%; overflow: hidden; ">
+                        © 2021 NF Honey Badgers. All rights reserved.
+                    </div>
+                    <img src="image/nfhb-onblack 1.png" style="width: 100px;" alt="">
+
+                </section>
+            </div>
+        </div>
+    </footer>
+
+</div>
+
+
+
+    <script src="javaScript.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script>
+        document.onreadystatechange = function() {
+            if (document.readyState !== "complete") {
+                document.querySelector(
+                  "body").style.visibility = "hidden";
+                document.querySelector(
+                  "#loader").style.visibility = "visible";
+            } else {
+                document.querySelector(
+                  "#loader").style.display = "none";
+                document.querySelector(
+                  "body").style.visibility = "visible";
+            }
+        };
+    </script>
+    <script src="web3Connect.js"></script>
+</body>
+
+</html>

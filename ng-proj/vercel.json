@@ -1,0 +1,12 @@
+{
+    "rewrites":[
+        {
+            "source" : "/metadata/:id" , 
+            "destination" : "/api/metadata/:id"
+        } , 
+        {
+            "source" : "/Solicity.html/metadata/:id" , 
+            "destination" : "/api/metadata/:id"
+        }
+    ]
+}
